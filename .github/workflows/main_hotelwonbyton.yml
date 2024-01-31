@@ -46,8 +46,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
@@ -57,13 +55,6 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_41FC0FB3903F406393B39D11B0EF70EB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_ABEBF7129FA04352A0526A15D90D7EEE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5DBE99E887344C0DA38E30F5353C82D2 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -71,5 +62,5 @@ jobs:
         with:
           app-name: 'HotelWonByTon'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5926935173064FE6936E312E7D3B0199 }}
           package: .
-          
