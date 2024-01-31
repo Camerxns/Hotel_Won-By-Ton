@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'HotelWonByTon'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5926935173064FE6936E312E7D3B0199 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8029DDECD1694CB9B6D8AD229D2CDE7B }}
           package: .
