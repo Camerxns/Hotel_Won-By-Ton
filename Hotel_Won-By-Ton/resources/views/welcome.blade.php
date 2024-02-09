@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hotelier - Hotel HTML Template</title>
+    <title>Hotel Won</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +47,7 @@
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                        <h1 class="m-0 text-primary text-uppercase">Hotel Won</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -55,42 +55,42 @@
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">HotelWon@gmail.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+012 345 6789</p>
+                                <p class="mb-0">1 610 345 6789</p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
                             <div class="d-inline-flex align-items-center py-2">
-                                <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="me-3" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="me-3" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                                <a class="me-3" href="https://twitter.com/?lang=en"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                <a class="" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+                            <h1 class="m-0 text-primary text-uppercase">Hotel Won</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Services</a>
-                                <a href="room.html" class="nav-item nav-link">Rooms</a>
+                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
+                                <a href="http://127.0.0.1:8000/about" class="nav-item nav-link">About</a>
+                                <a href="http://127.0.0.1:8000/service" class="nav-item nav-link">Services</a>
+                                <a href="http://127.0.0.1:8000/room" class="nav-item nav-link">Rooms</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking.html" class="dropdown-item">Booking</a>
-                                        <a href="team.html" class="dropdown-item">Our Team</a>
-                                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                        <a href="http://127.0.0.1:8000/booking" class="dropdown-item">Booking</a>
+                                        <a href="http://127.0.0.1:8000/team" class="dropdown-item">Our Team</a>
+                                        <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -114,8 +114,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -125,8 +125,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -229,7 +229,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="http://127.0.0.1:8000/service">Explore More</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="row g-3">
@@ -285,8 +285,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -315,8 +314,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -345,8 +343,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -365,8 +362,8 @@
                         <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                         <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
                         <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
-                        <a href="" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
+                        <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                        <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -625,10 +622,8 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
-                            <p class="text-white mb-0">
-								Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
-							</p>
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotel Won</h1></a>
+                            <p></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -669,7 +664,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Hotel Won</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
