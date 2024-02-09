@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [users::class, 'view']);
+// Route::get('/', [users::class, 'view']);
