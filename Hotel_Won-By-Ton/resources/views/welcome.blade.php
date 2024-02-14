@@ -93,7 +93,7 @@
                                         <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>
                             </div>
                             <a href="http://127.0.0.1:8000/signup" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Signup/login<i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
@@ -146,50 +146,7 @@
         <!-- Carousel End -->
 
 
-        <!-- Booking Start -->
-        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking End -->
+
 
 
         <!-- About Start -->
@@ -264,7 +221,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <img class="img-fluid" src="/img/24trending-shophotels1-articleLarge.webp" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -274,16 +231,15 @@
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
+                                       
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>1 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
-                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                    <small><i class="fa fa-wifi text-primary me-2"></i>Paid-Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">1 beds, 1 baths, plus wifi. This Junior suite offers it all for anyone thats making a quick getaway</p>
+                                <p class="text-body mb-3">Indulge in spacious elegance and luxurious amenities, offering unparalleled comfort and sophistication.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
@@ -294,7 +250,7 @@
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/room-2.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$200/Night</small>
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$132/Night</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
@@ -308,48 +264,53 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>1 Bed</small>
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">2 beds, 1 baths, plus wifi. This Executive Suite offers a nice cozy experince for those who are trying to have a</p>
+                                <p class="text-body mb-3">Designed for discerning professionals, this room combines functionality with refined style, providing a serene environment for work and relaxation.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/room-3.jpg" alt="">
-                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$300/Night</small>
+                                <img class="img-fluid" src="/img/0x0.jpg" alt="">
+                                <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$140/Night</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Super Deluxe</h5>
+                                    <h5 class="mb-0">The Grand Suite</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
+                                      
+                                       
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>2 Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>1 Bath</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
-                                <p class="text-body mb-3">For those who are planning a get away for the entire family this is the place for you </p>
+                                <p class="text-body mb-3">Escape to a haven of tranquility and opulence, where every detail is meticulously crafted to ensure an unforgettable stay.</p>
                                 <div class="d-flex justify-content-between">
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+            <div style="text-align: center">
+                <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="http://127.0.0.1:8000/room">View All</a>
+            </div>
+            
         </div>
         <!-- Room End -->
 
@@ -368,7 +329,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://youtube.com/shorts/8TKulP-S-64?feature=share" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -481,12 +442,12 @@
             <div class="container">
                 <div class="owl-carousel testimonial-carousel py-5">
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>I love playing apex legends all day and buying hierlooms to show on my verey famouse stream. BTW I am so glad that my mommy bought all these hierlooms for me so I feel complete, I love my moms credit card!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/image.png" style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Zach Skibidi</h6>
+                                <small>Professional Yapper</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
@@ -685,7 +646,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="http://127.0.0.1:8000/" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
