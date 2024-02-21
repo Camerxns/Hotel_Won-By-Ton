@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\users;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,35 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/booking', function () {
-    return view('booking');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/room', function () {
-    return view('room');
-});
-Route::get('/service', function () {
-    return view('service');
-});
-Route::get('/team', function () {
-    return view('team');
-});
-Route::get('/testimonial', function () {
-    return view('testimonial');
-});
-Route::get('/signup', function () {
-    return view('signup');
-});
-Route::get('/login', function () {
-    return view('login');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/payment', function(){
-    return view('payment');
-});
-
+require __DIR__.'/auth.php';

@@ -115,19 +115,20 @@
                             <h5 class="mb-0">Login</h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="GET" action="{{url ('/api/login')}}">
+                                @csrf
                               
                                
                                 <div class="mb-3">
-                                    <label for="inputEmail" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                                    <label for="inputEmail" class="form-label" name="Email">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" name="Email">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password">
+                                    <label for="inputPassword" class="form-label" name="Password">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" name="Password">
                                 </div>
                                 
-                               
+                            
                                 <button type="submit" class="btn btn-primary">Login</button>
                                 
                             </form>
