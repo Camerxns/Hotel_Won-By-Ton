@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class APIreservations extends Controller
+class Signup_API extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +21,16 @@ class APIreservations extends Controller
      */
     public function store(Request $request)
     {
-        //
+     $request -> validate([
+        'FirstName' =>'required',
+        'LastName' =>'required',
+        'Email' => 'required',
+        'Password' => 'required',
+        'AccessLevel'=>'required'
+     ]);
+     
+     User::create($request->all());
+     return redirect("/");
     }
 
     /**
@@ -44,6 +54,6 @@ class APIreservations extends Controller
      */
     public function destroy(string $id)
     {
-       //
+        //
     }
 }

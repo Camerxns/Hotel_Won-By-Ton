@@ -115,30 +115,28 @@
                             <h5 class="mb-0">Sign Up</h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form id ="signup" action={{ url('/api/submit_signup') }} method="POST" >
+                                @csrf
                                 <div class="mb-3">
                                     <label for="inputFirstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="inputFirstName" placeholder="Enter your first name">
+                                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputLastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="inputLastName" placeholder="Enter your last name">
+                                    <input type="text" class="form-control"  name="LastName"  id="LastName" placeholder="Enter your last name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputEmail" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                                    <input type="email" class="form-control" name="Email" id="Email" placeholder="Enter your email">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password">
+                                    <input type="password" class="form-control"  name="Password" id="Password" placeholder="Enter your password">
                                 </div>
+                               
                                 <div class="mb-3">
-                                    <label for="inputConfirmPassword" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm your password">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="inputUserType" class="form-label">User Type</label>
-                                    <select class="form-select" id="inputUserType">
+                                    <label for="inputUserType"  class="form-label">User Type</label>
+                                    <select class="form-select" id="AccessLevel" name="AccessLevel">
                                         <option value="user">User</option>
                                         <option value="admin">Admin</option>
                                         <option value="manager">Hotel Manager</option>
