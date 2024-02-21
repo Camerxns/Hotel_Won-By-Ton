@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Signup_API;
+use App\Http\Controllers\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/submit_signup', [Signup_API::class, 'store']);
+
+Route::resource('login', Login::class);

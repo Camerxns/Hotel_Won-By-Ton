@@ -82,7 +82,7 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
+                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Dashboard</a>
                                 <a href="http://127.0.0.1:8000/about" class="nav-item nav-link">About</a>
                                 <a href="http://127.0.0.1:8000/service" class="nav-item nav-link">Services</a>
                                 <a href="http://127.0.0.1:8000/room" class="nav-item nav-link">Rooms</a>
@@ -633,7 +633,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
+                                <a href="">Dashboard</a>
                                 <a href="">Cookies</a>
                                 <a href="">Help</a>
                                 <a href="">FQAs</a>
