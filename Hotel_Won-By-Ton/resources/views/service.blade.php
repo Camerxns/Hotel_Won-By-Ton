@@ -91,6 +91,8 @@
                                         <a href="http://127.0.0.1:8000/booking" class="dropdown-item">Booking</a>
                                         <a href="team" class="dropdown-item">Our Team</a>
                                         <a href="testimonial" class="dropdown-item">Testimonial</a>
+                                        <a href="http://127.0.0.1:8000/managerAdd" class="dropdown-item">Add Room</a>
+                                        <a href="http://127.0.0.1:8000/managerDelete" class="dropdown-item">Delete Room </a>
                                     </div>
                                 </div>
                                 <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>

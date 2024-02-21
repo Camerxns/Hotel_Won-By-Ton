@@ -114,38 +114,35 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
-                            <h5 class="mb-0">Sign Up</h5>
+                            <h5 class="mb-0">Add Room</h5>
                         </div>
                         <div class="card-body">
                             <form id ="signup" action={{ url('/api/submit_signup') }} method="POST" >
                                 @csrf
                                 <div class="mb-3">
-                                    <label for="inputFirstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name">
+                                    <label for="inputFirstName" class="form-label">Room Name</label>
+                                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter the room name">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputLastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control"  name="LastName"  id="LastName" placeholder="Enter your last name">
+                                    <label for="inputLastName" class="form-label">Capacity</label>
+                                    <input type="text" class="form-control"  name="Capacity"  id="Capacity" placeholder="Enter the capacity of the room">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputEmail" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" name="Email" id="Email" placeholder="Enter your email">
+                                    <label for="inputEmail" class="form-label">Room Type</label>
+                                    <input type="email" class="form-control" name="RoomType" id="RoomType" placeholder="Enter the room type">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control"  name="Password" id="Password" placeholder="Enter your password">
+                                    <label for="inputPassword" class="form-label">PricePerNight</label>
+                                    <input type="password" class="form-control"  name="PricePerNight" id="PricePerNight" placeholder="Enter the price per night">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword" class="form-label">Availability</label>
+                                    <input type="password" class="form-control"  name="Availability" id="Availability" placeholder="Enter the rooms availability">
                                 </div>
                                
-                                <div class="mb-3">
-                                    <label for="inputUserType"  class="form-label">User Type</label>
-                                    <select class="form-select" id="AccessLevel" name="AccessLevel">
-                                        <option value="user">User</option>
-                                        <option value="admin">Admin</option>
-                                        <option value="manager">Hotel Manager</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Sign Up</button>
-                                <a href="http://127.0.0.1:8000/login" class="btn btn-primary ">Login<i class="fa fa-arrow-right ms-3"></i></a><br><br>
+                                
+                                <button type="submit" class="btn btn-primary">Add Room</button>
+                                
                             </form>
                             
                         </div>
