@@ -114,6 +114,8 @@
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Booking</li>
+                            <a href="http://127.0.0.1:8000/managerAdd" class="dropdown-item">Add Room</a>
+                            <a href="http://127.0.0.1:8000/managerDelete" class="dropdown-item">Delete Room </a>
                         </ol>
                     </nav>
                 </div>

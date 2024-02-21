@@ -82,7 +82,7 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Dashboard</a>
+                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
                                 <a href="http://127.0.0.1:8000/about" class="nav-item nav-link">About</a>
                                 <a href="http://127.0.0.1:8000/service" class="nav-item nav-link">Services</a>
                                 <a href="http://127.0.0.1:8000/room" class="nav-item nav-link">Rooms</a>
@@ -92,6 +92,8 @@
                                         <a href="http://127.0.0.1:8000/booking" class="dropdown-item">Booking</a>
                                         <a href="http://127.0.0.1:8000/team" class="dropdown-item">Our Team</a>
                                         <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
+                                        <a href="http://127.0.0.1:8000/managerAdd" class="dropdown-item">Add Room</a>
+                                        <a href="http://127.0.0.1:8000/managerDelete" class="dropdown-item">Delete Room </a>
                                     </div>
                                 </div>
                                 <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>
