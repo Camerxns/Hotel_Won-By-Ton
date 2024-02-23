@@ -53,9 +53,9 @@ Route::get('/testimonial', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
 Route::get('/payment', function(){
     return view('payment');
@@ -88,9 +88,6 @@ Route::get('/testimonial', function () {
 });
 Route::get('/signup', function () {
     return view('signup');
-});
-Route::get('/login', function () {
-    return view('login');
 });
 
 Route::get('/payment', function(){
