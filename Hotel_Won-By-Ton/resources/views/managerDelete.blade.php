@@ -1,3 +1,4 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,55 +59,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-primary text-uppercase">Hotel Won</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
-                    <a href="http://127.0.0.1:8000/about" class="nav-item nav-link">About</a>
-                    <a href="http://127.0.0.1:8000/service" class="nav-item nav-link">Services</a>
-                    <a href="http://127.0.0.1:8000/room" class="nav-item nav-link">Rooms</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="http://127.0.0.1:8000/booking" class="dropdown-item">Booking</a>
-                            <a href="http://127.0.0.1:8000/team" class="dropdown-item">Our Team</a>
-                            <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
-                            <a href="http://127.0.0.1:8000/managerAdd" class="dropdown-item">Add Room</a>
-                            <a href="http://127.0.0.1:8000/managerDelete" class="dropdown-item">Delete Room </a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="navbar-nav">
-                    <div class="h-100 d-inline-flex align-items-center py-2 me-4">
-                        <i class="fa fa-envelope text-primary me-2"></i>
-                        <p class="mb-0">HotelWon@gmail.com</p>
-                    </div>
-                    <div class="h-100 d-inline-flex align-items-center py-2">
-                        <i class="fa fa-phone-alt text-primary me-2"></i>
-                        <p class="mb-0">1 610 345 6789</p>
-                    </div>
-                    <div class="d-inline-flex align-items-center py-2">
-                        <a class="me-3" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="me-3" href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                        <a class="me-3" href="https://twitter.com/?lang=en"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="me-3" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a class="" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- End Navbar -->
-
+  
     <!-- Sign Up Form -->
     <div class="content-wrap">
         <div class="container mt-5 mb-5">
@@ -175,3 +128,4 @@
 </body>
 
 </html>
+</x-app-layout>
