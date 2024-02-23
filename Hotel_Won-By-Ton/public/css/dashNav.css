@@ -1,0 +1,130 @@
+/* Navigation Container */
+nav {
+    background-color: black; /* Set your desired background color */
+  }
+  
+  /* Inner Container */
+  .nav-inner {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Set your desired height */
+  }
+  
+  /* Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Set your desired text color */
+    text-decoration: none;
+  }
+  
+  .nav-logo img {
+    height: 50px; /* Set your logo height */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: #ffffff; /* Set your desired text color */
+    text-decoration: none;
+    margin-right: 20px; /* Adjust as needed */
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: #cbd5e0; /* Set your desired hover color */
+  }
+  
+  /* Dropdown Container */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4a5568; /* Set your desired background color */
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .nav-link:hover .dropdown {
+    display: flex;
+  }
+  
+  .dropdown a {
+    color: #ffffff; /* Set your desired text color */
+    text-decoration: none;
+    padding: 8px 0;
+  }
+  
+  .dropdown a:hover {
+    background-color: #2d3748; /* Set your desired hover background color */
+  }
+  
+  /* Active Link */
+  .nav-link.active {
+    font-weight: bold; /* Set your desired font weight */
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+      color: #ffffff; /* Set your desired text color */
+      cursor: pointer;
+    }
+  
+    .hamburger:hover {
+      color: #cbd5e0; /* Set your desired hover color */
+    }
+  
+    .responsive-nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #4a5568; /* Set your desired background color */
+      position: absolute;
+      top: 80px; /* Should be equal to your nav height */
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+  
+    .responsive-nav-links a {
+      color: #ffffff; /* Set your desired text color */
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+    }
+  
+    .responsive-nav-links a:hover {
+      background-color: #2d3748; /* Set your desired hover background color */
+    }
+  
+    .responsive-nav-links .dropdown {
+      display: none;
+      padding-left: 20px;
+    }
+  
+    .responsive-nav-links .nav-link.active {
+      font-weight: bold; /* Set your desired font weight */
+    }
+  
+    .responsive-nav-links .nav-link:hover .dropdown {
+      display: flex;
+    }
+  }
+  
