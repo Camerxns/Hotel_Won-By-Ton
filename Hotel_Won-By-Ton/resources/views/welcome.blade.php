@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div>
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -52,15 +52,15 @@
                     </a>
                 </div>
                 <div class="col-lg-9">
-                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                    <div class="row gx-0 d-none d-lg-flex">
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">HotelWon@gmail.com</p>
+                                <p class="mb-0 text-white">HotelWon@gmail.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
                                 <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">1 610 345 6789</p>
+                                <p class="mb-0 text-white">1 610 345 6789</p>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -98,7 +98,13 @@
                                 </div>
                                 <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>
                             </div>
-                            <a href="http://127.0.0.1:8000/signup" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Signup/login<i class="fa fa-arrow-right ms-3"></i></a>
+                            <div>
+                                {{-- @if ($__SESSION = TRUE){
+                                    <p>Hello, {{ Auth::user()->name }}</p></div>
+                                }
+                                @endif --}}
+                        </div>
+                            <a href="http://127.0.0.1:8000/register" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Signup/login<i class="fa fa-arrow-right ms-3"></i></a>
                         </div>
                     </nav>
                 </div>
@@ -488,7 +494,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staff</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -526,7 +532,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid" src="img/Jon.jpg" alt="">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -542,7 +548,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <img class="img-fluid" src="img/Jakob.png" alt="">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>

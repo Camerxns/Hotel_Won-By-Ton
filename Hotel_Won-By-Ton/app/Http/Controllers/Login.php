@@ -12,20 +12,20 @@ class Login extends Controller
      */
     public function index(Request $request)
     {
-        $user = $request->validate([
-            'Email'=>'required|email',
-            'Password'=>'required'
-        ]);
+        // $user = $request->validate([
+        //     'Email'=>'required|email',
+        //     'Password'=>'required'
+        // ]);
         
-        $existingUser = User::where('Email', $user['Email'])->first();
+        // $existingUser = User::where('Email', $user['Email'])->first();
 
-        if(!$existingUser){
-            echo 'Error: User Not Found!';
-            error_log('Error');
-        }
-        if ($existingUser){
-            return redirect('/');
-        }
+        // if(!$existingUser){
+        //     echo 'Error: User Not Found!';
+        //     error_log('Error');
+        // }
+        // if ($existingUser){
+        //     return redirect('/');
+        // }
     }
 
     /**

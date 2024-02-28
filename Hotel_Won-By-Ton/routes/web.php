@@ -57,16 +57,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::get('/signup', function () {
-//     return view('signup');
-// });
-// Route::get('/login', function () {
-//     return view('login');
-// });
-
 Route::get('/payment', function(){
     return view('payment');
 });
+
+Route::get('/popup', function () {
+    return view('popup');
+})->name('popup');
 
 require __DIR__.'/auth.php';
 Route::get('/', function () {
