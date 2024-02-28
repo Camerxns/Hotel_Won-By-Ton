@@ -40,14 +40,13 @@
         align-items: center;
         align-self: center;
     }
-    
-    form {
-        
+
+        form {
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 800px;
         }
 
         label {
@@ -67,7 +66,7 @@
             margin-bottom: 16px;
         }
 
-        button {
+        #pay {
             background-color: #4caf50;
             color: white;
             padding: 10px 15px;
@@ -149,6 +148,7 @@
     <!-- Payment start -->
     <div class="contain">
        <form action="process_payment.php" method="post">
+        @csrf
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -169,23 +169,67 @@
 
         <div class="total-price">Total Price: $<span id="totalPrice">0.00</span></div>
 
-        <button type="submit">Make Payment</button>
+        <button type="button" onclick="makePayment()" id="pay">Make Payment</button>
         <a href="http://127.0.0.1:8000/" class="btn btn-primary ">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
     </form> 
     </div>
     
 
     <script>
+       function makePayment() {
+    console.log('makePayment function called');
+
+    // Gather form data
+    let username = document.getElementById("username").value;
+    let lengthOfStay = document.getElementById("lengthOfStay").value;
+    let location = document.getElementById("location").value;
+    let creditCard = document.getElementById("creditCard").value;
+    let expiryDate = document.getElementById("expiryDate").value;
+    let cvv = document.getElementById("cvv").value;
+    let totalPrice = document.getElementById("totalPrice").textContent;
+
+    // Make an AJAX request to send form data to the server
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "process_payment.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Prepare the data to send
+    let data = `username=${username}&lengthOfStay=${lengthOfStay}&location=${location}&creditCard=${creditCard}&expiryDate=${expiryDate}&cvv=${cvv}&totalPrice=${totalPrice}`;
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // If the server responds successfully, redirect to the receipt page
+            let response = xhr.responseText;
+            if (response === "success") {
+                window.location.href = `/receipt?username=${username}&lengthOfStay=${lengthOfStay}&location=${location}&creditCard=${creditCard}&expiryDate=${expiryDate}&cvv=${cvv}&totalPrice=${totalPrice}`;
+            } else {
+                console.error("Payment processing failed.");
+                // Handle the error or display a message to the user
+            }
+        }
+    };
+
+    // Send the AJAX request with form data
+    xhr.send(data);
+}
+
+
         function calculateTotalPrice() {
             let lengthOfStay = parseFloat(document.getElementById("lengthOfStay").value);
 
             // Ensure lengthOfStay is not below 0
             lengthOfStay = Math.max(0, lengthOfStay);
 
-            const nightlyRate = 100; // Adjust the nightly rate as needed
+            const nightlyRate = 100; // literally just add the priceid from the database to change this
             const totalPrice = lengthOfStay * nightlyRate;
             document.getElementById("lengthOfStay").value = lengthOfStay; // Update the input value
             document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+        }
+
+        document.getElementById("lengthOfStay").addEventListener("input", calculateTotalPrice);
+
+        function cancelPayment() {
+            alert("Payment canceled");
         }
 
         document.getElementById("lengthOfStay").addEventListener("input", calculateTotalPrice);

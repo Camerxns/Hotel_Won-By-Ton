@@ -53,18 +53,12 @@ Route::get('/testimonial', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
-// Route::get('/login', function () {
-//     return view('login');
-// });
 
 Route::get('/payment', function(){
     return view('payment');
 });
 
 require __DIR__.'/auth.php';
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/about', function () {
     return view('about');
 });
@@ -99,4 +93,7 @@ Route::get('/managerAdd', function(){
 });
 Route::get('/managerDelete', function(){
     return view('managerDelete');
+});
+ Route::get('/receipt',function(){
+    return view('receipt');
 });
