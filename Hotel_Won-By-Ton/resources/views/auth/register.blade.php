@@ -42,8 +42,8 @@
          <div class="mt-4">
             <label for="inputUserType" style="color: white" >User Type</label>
             <select class="block mt-1 w-full" id="AccessLevel" name="AccessLevel">
-                <option class="bloack mt-1 w-full"value="user">User</option>
-                <option value="manager">Hotel Manager</option>
+                <option class="bloack mt-1 w-full"value="User">User</option>
+                <option value="Manager">Hotel Manager</option>
             </select>
         </div>
 

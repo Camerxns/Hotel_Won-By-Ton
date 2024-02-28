@@ -34,19 +34,24 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'AccessLevel' , 
+            'AccessLevel'
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'AccessLevel',
+            'AccessLevel' => $request->AccessLevel
         ]);
 
         event(new Registered($user));
 
-        Auth::login($user);
+        if($request->AccessLevel === 'User'){
+            Auth::login($user);
+        }
+        else{
+            return redirect()->route('popup')->with('message', 'You have signed up! Please wait for validation from an administrator.');
+        }
 
         return redirect(RouteServiceProvider::HOME);
     }
