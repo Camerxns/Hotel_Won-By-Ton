@@ -56,6 +56,43 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/booking', function () {
+    return view('booking');
+})->middleware(['auth', 'verified'])->name('booking');
+Route::get('/room', function () {
+    return view('room');
+})->middleware(['auth', 'verified'])->name('room');
+Route::get('/service', function () {
+    return view('service');
+})->middleware(['auth', 'verified'])->name('service');
+Route::get('/team', function () {
+    return view('team');
+})->middleware(['auth', 'verified'])->name('team');
+Route::get('/testimonial', function () {
+    return view('testimonial');
+});
+Route::get('/signup', function () {
+    return view('signup');
+});
+})->middleware(['auth', 'verified'])->name('testimonial');
+Route::get('/managerAdd', function () {
+    return view('managerAdd');
+})->middleware(['auth', 'verified'])->name('managerAdd');
+Route::get('/managerDelete', function () {
+    return view('managerDelete');
+})->middleware(['auth', 'verified'])->name('managerDelete');
+Route::get('/contact', function () {
+    return view('contact');
+})->middleware(['auth', 'verified'])->name('contact');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 Route::get('/payment', function(){
     return view('payment');
@@ -66,8 +103,41 @@ Route::get('/popup', function () {
 })->name('popup');
 
 require __DIR__.'/auth.php';
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/booking', function () {
+    return view('booking');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/room', function () {
+    return view('room');
+});
+Route::get('/service', function () {
+    return view('service');
+});
+Route::get('/team', function () {
+    return view('team');
+});
+Route::get('/testimonial', function () {
+    return view('testimonial');
+});
+Route::get('/signup', function () {
+    return view('signup');
+});
 Route::get('/', function () {
     return view('welcome');
 });
 
 
+Route::get('/managerAdd', function(){
+    return view('managerAdd');
+});
+Route::get('/managerDelete', function(){
+    return view('managerDelete');
+});
+ Route::get('/receipt',function(){
+    return view('receipt');
+});
