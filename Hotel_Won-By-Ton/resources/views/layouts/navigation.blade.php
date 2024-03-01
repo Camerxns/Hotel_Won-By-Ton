@@ -1,62 +1,59 @@
 <nav x-data="{ open: false }">
+    
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
+                
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('About') }}
+                    <x-nav-link :href="route('about1')" :active="request()->routeIs('about1')">
+                        {{ __('about') }}
                     </x-nav-link>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('room')" :active="request()->routeIs('room')">
                             {{ __('Rooms') }}
                         </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
+                        {{ __('service') }}
                     </x-nav-link><div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('room') }}
                     </x-nav-link>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
+                        <x-nav-link :href="route('booking')" :active="request()->routeIs('booking')">
+                            {{ __('booking') }}
                         </x-nav-link>
                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                                {{ __('Dashboard') }}
+                            <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
+                                {{ __('team') }}
                             </x-nav-link>
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                                    {{ __('Dashboard') }}
+                                <x-nav-link :href="route('testimonial')" :active="request()->routeIs('testimonial')">
+                                    {{ __('testimonial') }}
                                 </x-nav-link>
                                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                                        {{ __('Dashboard') }}
+                                    <x-nav-link :href="route('managerAdd')" :active="request()->routeIs('managerAdd')">
+                                        {{ __('managerAdd') }}
                                     </x-nav-link>
                                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                                            {{ __('Dashboard') }}
+                                        <x-nav-link :href="route('managerDelete')" :active="request()->routeIs('managerDelete')">
+                                            {{ __('managerDelete') }}
                                         </x-nav-link>
                                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                                                {{ __('Dashboard') }}
+                                            <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                                                {{ __('contact') }}
                                             </x-nav-link>
-            </div>
+            </div> --}}
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
