@@ -7,12 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class HotelManager extends Model
 {
+
+    protected $table = 'HotelManager';
+    
     use HasFactory;
     protected $fillable = [
-        'UserID',
-        'HotelID',
-        'FirstName',
-        'LastName',
-        'Email'
+        'id',
+        'name',
+        'email',
+        'email_verified_at',
+        'password',
+        'remember_token',
+        'created_at',
+        'updated_at',
+        'AccessLevel'
     ];
 }

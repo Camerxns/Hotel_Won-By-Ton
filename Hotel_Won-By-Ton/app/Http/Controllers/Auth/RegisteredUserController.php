@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\HotelManager;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -37,12 +38,24 @@ class RegisteredUserController extends Controller
             'AccessLevel'
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'AccessLevel' => $request->AccessLevel
-        ]);
+        if($request->AccessLevel === 'Manager'){
+            $user = HotelManager::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'AccessLevel' => $request->AccessLevel
+            ]);
+        }
+        else{
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'AccessLevel' => $request->AccessLevel
+            ]);
+        }
+
+        
 
         event(new Registered($user));
 
