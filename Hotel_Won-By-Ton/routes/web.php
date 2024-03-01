@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminDashboardAPI;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
@@ -77,7 +78,6 @@ Route::get('/testimonial', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
-})->middleware(['auth', 'verified'])->name('testimonial');
 Route::get('/managerAdd', function () {
     return view('managerAdd');
 })->middleware(['auth', 'verified'])->name('managerAdd');
@@ -101,6 +101,8 @@ Route::get('/payment', function(){
 Route::get('/popup', function () {
     return view('popup');
 })->name('popup');
+
+Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
 
 require __DIR__.'/auth.php';
 Route::get('/about', function () {
