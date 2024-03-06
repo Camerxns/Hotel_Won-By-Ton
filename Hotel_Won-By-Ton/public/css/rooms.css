@@ -1,0 +1,42 @@
+/* rooms.css */
+
+/* Define styles for the container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing between items */
+}
+
+/* Define styles for each room box */
+.vehicleCon {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(30% - 20px); /* Adjust width for 3 columns */
+    box-sizing: border-box;
+}
+
+/* Define styles for the room image */
+.vehicleImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optional: Add styling for the room description */
+.desc-item {
+    margin-bottom: 5px;
+}
+
+/* Optional: Add styling for the book now button */
+.book-now-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Optional: Add hover effect for the book now button */
+.book-now-btn:hover {
+    background-color: #0056b3;
+}

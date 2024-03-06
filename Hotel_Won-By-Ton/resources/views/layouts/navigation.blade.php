@@ -26,7 +26,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <!-- Navigation Links -->
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-nav-link>
@@ -40,7 +40,6 @@
                             {{ __('Rooms') }}
                         </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
                         {{ __('service') }}
                     </x-nav-link>
@@ -52,10 +51,9 @@
                             <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
                                 {{ __('team') }}
                             </x-nav-link>
-                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <x-nav-link :href="route('testimonial')" :active="request()->routeIs('testimonial')">
+                                {{-- <x-nav-link :href="route('testimonial')" :active="request()->routeIs('testimonial')">
                                     {{ __('testimonial') }}
-                                </x-nav-link>
+                                </x-nav-link> --}}
                                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                     <x-nav-link :href="route('managerAdd')" :active="request()->routeIs('managerAdd')">
                                         {{ __('managerAdd') }}
@@ -68,7 +66,7 @@
                                             <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                                                 {{ __('contact') }}
                                             </x-nav-link>
-            </div> --}}
+            </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

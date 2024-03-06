@@ -79,7 +79,6 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary">Delete Room</button>
                             </form>
-                            
                         </div>
                     </div><br><br>
                 </div>

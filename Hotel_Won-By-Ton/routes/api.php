@@ -34,3 +34,4 @@ Route::get('/admin-dashboard', [adminDashboardAPI::class, 'index'])->name('admin
 Route::post('/admin-dashboard/{id}/store', [adminDashboardAPI::class, 'store'])->name('admin.dashboard.store');
 Route::delete('/admin-dashboard/{id}', [adminDashboardAPI::class, 'destroy'])->name('admin.dashboard.destroy');
 
+Route::delete('/Room/{id}', 'App\Http\Controllers\managerAddAPI@destroy')->name('Room.destroy');
