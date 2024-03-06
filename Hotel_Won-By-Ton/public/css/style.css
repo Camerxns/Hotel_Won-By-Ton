@@ -37,7 +37,7 @@
 }
 
 
-/*** Button ***/
+
 .btn {
     font-weight: 500;
     text-transform: uppercase;
@@ -452,7 +452,7 @@
     font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
-    transition: .3s;
+    transition: .3s;moneyavailability: Available
 }
 
 .footer .btn.btn-link::before {

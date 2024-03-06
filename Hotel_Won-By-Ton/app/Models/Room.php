@@ -14,11 +14,15 @@ class Room extends Model
     public $timestamps = false;
     protected $fillable = [
         'HotelID',
+        'RoomName',
+        'Discount',
         'Capacity',
         'RoomType',
         'PricePerNight',
         'Availability',
         'Price',
-        'RoomID'
+        'RoomID',
+        'Image',
+        'Description'
     ];
 }
