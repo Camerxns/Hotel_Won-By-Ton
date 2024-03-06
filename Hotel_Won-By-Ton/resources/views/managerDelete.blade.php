@@ -70,16 +70,14 @@
                             <h5 class="mb-0">Delete Room</h5>
                         </div>
                         <div class="card-body">
-                            <form id ="signup" action={{ url('/api/submit_signup') }} method="POST" >
+                            <form id="deleteForm" action="{{ route('Room.destroy', ['id' => 0]) }}" method="POST">
                                 @csrf
+                                @method('DELETE')
                                 <div class="mb-3">
-                                    <label for="inputFirstName" class="form-label">Room Name</label>
-                                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter the room name">
+                                    <label for="RoomID" class="form-label">Room ID</label>
+                                    <input type="text" class="form-control" id="RoomID" name="RoomID" placeholder="Enter the room's ID to be deleted" required>
                                 </div>
-                                
-                                
                                 <button type="submit" class="btn btn-primary">Delete Room</button>
-                                
                             </form>
                             
                         </div>

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\adminDashboardAPI;
 use App\Http\Controllers\Signup_API;
+use App\Http\Controllers\rooms;
+use App\Http\Controllers\addRoomAPI;
 use App\Http\Controllers\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/submit_signup', [Signup_API::class, 'store']);
 
 Route::resource('login', Login::class);
+Route::post('/addRoom', [addRoomAPI::class, 'store'])-> name('addRoom');
+Route::delete('/Room/{id}', 'App\Http\Controllers\addRoomAPI@destroy')->name('Room.destroy');
 
 Route::resource('adminDashboard', adminDashboardAPI::class);
 

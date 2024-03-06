@@ -71,27 +71,39 @@
                             <h5 class="mb-0">Add Room</h5>
                         </div>
                         <div class="card-body">
-                            <form id ="signup" action={{ url('/api/submit_signup') }} method="POST" >
+                            <form id ="signup" action={{ route('addRoom') }} method="POST" >
                                 @csrf
                                 <div class="mb-3">
                                     <label for="inputFirstName" class="form-label">Room Name</label>
-                                    <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter the room name">
+                                    <input type="text" class="form-control" id="RoomName" name="RoomName" placeholder="Enter the room name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputLastName" class="form-label">Capacity</label>
-                                    <input type="text" class="form-control"  name="Capacity"  id="Capacity" placeholder="Enter the capacity of the room">
+                                    <input type="text" class="form-control"  name="Capacity"  id="Capacity" placeholder="Enter person limit for room">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputEmail" class="form-label">Room Type</label>
-                                    <input type="email" class="form-control" name="RoomType" id="RoomType" placeholder="Enter the room type">
+                                    <input type="" class="form-control" name="RoomType" id="RoomType" placeholder="Enter the room type lounge, suite, etc.">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">PricePerNight</label>
-                                    <input type="password" class="form-control"  name="PricePerNight" id="PricePerNight" placeholder="Enter the price per night">
+                                    <input type="" class="form-control"  name="Price" id="Price" placeholder="Enter the price per night">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword" class="form-label">Discount - %Off</label>
+                                    <input type="" class="form-control"  name="Discount" id="Discount" placeholder="Enter a discount if any for room">
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputPassword" class="form-label">Availability</label>
-                                    <input type="password" class="form-control"  name="Availability" id="Availability" placeholder="Enter the rooms availability">
+                                    <input type="" class="form-control"  name="Availability" id="Availability" placeholder="Enter the rooms availability">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword" class="form-label">Image of Room</label>
+                                    <input type="" class="form-control"  name="Image" id="Image" placeholder="Enter the image url for room">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword" class="form-label">Description of Room</label>
+                                    <input type="" class="form-control"  name="Description" id="Description" placeholder="Enter description of room">
                                 </div>
                                
                                 

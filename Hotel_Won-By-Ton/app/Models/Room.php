@@ -8,13 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+    public   $timestamps = false;
+    protected $primaryKey = 'RoomID';
     protected $fillable = [
         'HotelID',
+        'RoomName',
+        'Discount',
         'Capacity',
         'RoomType',
         'PricePerNight',
         'Availability',
         'Price',
-        'RoomID'
+        'RoomID',
+        'Image',
+        'Description'
     ];
 }

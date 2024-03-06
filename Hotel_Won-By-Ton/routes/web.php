@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\users;
+use App\Http\Controllers\rooms;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +32,16 @@ Route::get('/about1', function () {
 Route::get('/booking', function () {
     return view('booking');
 })->middleware(['auth', 'verified'])->name('booking');
-Route::get('/room', function () {
-    return view('room');
-})->middleware(['auth', 'verified'])->name('room');
+
+
+// Route::get('/room', function () {
+//     return view('room');
+// })->middleware(['auth', 'verified'])->name('room');
+
+Route::get('/room2', [rooms::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
+
+
+
 Route::get('/service', function () {
     return view('service');
 })->middleware(['auth', 'verified'])->name('service');
@@ -133,8 +142,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/managerAdd', function(){
+Route::get('show_room', [rooms::class, 'index']);Route::get('/managerAdd', function(){
     return view('managerAdd');
 });
 Route::get('/managerDelete', function(){
