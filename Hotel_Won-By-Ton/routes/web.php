@@ -8,7 +8,7 @@ use App\Http\Controllers\managerAddAPI;
 use App\Http\Controllers\roomsAPI;
 use App\Http\Controllers\users;
 use App\Http\Controllers\rooms;
-
+use App\Http\Controllers\Payment;
 use App\Http\Controllers\ReceiptController;
 
 /*
@@ -32,9 +32,9 @@ Route::get('/dashboard', function () {
 Route::get('/about1', function () {
     return view('about1');
 })->middleware(['auth', 'verified'])->name('about1');
-Route::get('/booking', function () {
-    return view('booking');
-})->middleware(['auth', 'verified'])->name('booking');
+
+
+Route::get('/booking', [Payment::class,'showBookingForm'])->middleware(['auth', 'verified'])->name('booking');
 
 
 // Route::get('/room', function () {
@@ -98,3 +98,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');
+// Route::get('/booking', [Payment::class, 'showPaymentForm'])->name('payment.show');

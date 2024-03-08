@@ -1,258 +1,245 @@
 <x-app-layout>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Hotelier - Hotel HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div >
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-      
-        <!-- Booking Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Room Booking</h6>
-                    <h1 class="mb-5">Book A <span class="text-primary text-uppercase">Luxury Room</span></h1>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
-                                            <label for="checkin">Check In</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating date" id="date4" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
-                                            <label for="checkout">Check Out</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="select1">
-                                              <option value="1">Adult 1</option>
-                                              <option value="2">Adult 2</option>
-                                              <option value="3">Adult 3</option>
-                                            </select>
-                                            <label for="select1">Select Adult</label>
-                                          </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="select2">
-                                              <option value="1">Child 1</option>
-                                              <option value="2">Child 2</option>
-                                              <option value="3">Child 3</option>
-                                            </select>
-                                            <label for="select2">Select Child</label>
-                                          </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="select3">
-                                              <option value="1">Room 1</option>
-                                              <option value="2">Room 2</option>
-                                              <option value="3">Room 3</option>
-                                            </select>
-                                            <label for="select3">Select A Room</label>
-                                          </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                            <label for="message">Special Request</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Booking End -->
-
-
-        <!-- Newsletter Start -->
-        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 border rounded p-1">
-                    <div class="border rounded text-center p-1">
-                        <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                            <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter Start -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <title>payment</title>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="" name="keywords">
+            <meta content="" name="description">
         
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotelier</h1></a>
-                            <p class="text-white mb-0">
-								Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
-							</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
-                            <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
-                            </div>
-                            <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Spa & Fitness</a>
-                                <a class="btn btn-link" href="">Sports & Gaming</a>
-                                <a class="btn btn-link" href="">Event & Party</a>
-                                <a class="btn btn-link" href="">GYM & Yoga</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Favicon -->
+            <link href="img/favicon.ico" rel="icon">
+        
+            <!-- Google Web Fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+        
+            <!-- Icon Font Stylesheet -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        
+            <!-- Libraries Stylesheet -->
+            <link href="lib/animate/animate.min.css" rel="stylesheet">
+            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+            <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        
+            <!-- Customized Bootstrap Stylesheet -->
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+            <!-- Template Stylesheet -->
+            <link href="css/style.css" rel="stylesheet">
+        </head>
+    </head>
+    <style>
+        .contain{
+            margin-top: 50px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+    
+            form {
+                background-color: #f4f4f4;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 800px;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+    
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+    
+            .total-price {
+                font-weight: bold;
+                margin-bottom: 16px;
+            }
+    
+            #pay {
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            button[type="button"] {
+                background-color: #f44336;
+            }
+    </style>
+    <body>
+    
+        
+         <!-- Header Start -->
+        
+        <!-- Header End -->
+    
+        <!-- Payment start -->
+        <div class="contain">
+            <form id="paymentForm" action="#" method="post">
+                @csrf <!-- CSRF token -->
+    
+                <label for="reservationId">Reservation ID:</label>
+                <input type="text" id="reservationId" name="reservationId" readonly>
+    
+                <label for="roomId">Rooms:</label>
+                <select name="roomId" id="roomId">
+                    @foreach ($rooms as $room)
+                        <option value="{{ $room->RoomID }}" data-price="{{ $room->PricePerNight }}">{{ $room->RoomName }}</option>
+                    @endforeach
+                </select>
+    
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+            
+                <label for="checkOutDate">Check-out Date:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+    
+                <div class="total-price">Total Price: $<span id="totalPrice">0.00</span></div>
+                <label for="pricePerNight">Price per Night:</label>
+                
+                    @foreach ( $rooms as $room)
+                    <div class="total-price">Total Price: $<span id="totalPrice">{{$room->price}}</span></div>
+        
+                    @endforeach
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" readonly>
+    
+                <label for="creditCard">Credit Card:</label>
+                <input type="text" id="creditCard" name="creditCard" placeholder="**** **** **** ****" required>
+    
+                <button type="button" onclick="makePayment()" id="pay" href="http://127.0.0.1:8000/receipt">Make Payment</button>
+                <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
+            </form>
         </div>
-        <!-- Footer End -->
+        
+    
+        <script>
+           function generateRandomReservationId() {
+                // Generate a random number as a reservation ID
+                let randomNumber = Math.floor(Math.random() * 1000000); // You can adjust the range as needed
+                document.getElementById("reservationId").value = randomNumber;
+            }
+    
+            // Call this function when the page loads or when needed
+            generateRandomReservationId();
+    
+    
+          // Get references to the date inputs
+        var checkInDateInput = document.getElementById('checkInDate');
+        var checkOutDateInput = document.getElementById('checkOutDate');
+    
+        // Attach the input event listeners
+        checkInDateInput.addEventListener('input', calculateStay);
+        checkOutDateInput.addEventListener('input', calculateStay);
+    
+        function calculateStay() {
+          // Get the check-in and check-out date values
+          var checkInDate = new Date(checkInDateInput.value);
+          var checkOutDate = new Date(checkOutDateInput.value);
+    
+          // Check if both dates are selected
+          if (!checkInDate || !checkOutDate) {
+            alert("Please select both check-in and check-out dates.");
+            return;
+          }
+    
+          // Calculate the duration of stay in milliseconds
+          var durationInMs = checkOutDate - checkInDate;
+    
+          // Convert the duration to days
+          var durationInDays = durationInMs / (1000 * 60 * 60 * 24);
+    
+          // Display the result (you can customize this part according to your needs)
+          alert("You have selected a stay of " + durationInDays + " days.");
+        }
+        function makePayment() {
+        // Gather the data from the form
+        let reservationId = document.getElementById("reservationId").value;
+        let roomId = document.getElementById("roomId").value;
+        let checkinDate = document.getElementById("checkinDate").value;
+        let checkoutDate = document.getElementById("checkoutDate").value;
+        let totalPrice = document.getElementById("totalPrice").textContent;
+        let status = document.getElementById("status").value;
+        let creditCard = document.getElementById("creditCard").value;
+    
+        // Implement the logic to send the data to your server for processing (you can use AJAX)
+        // Assuming the payment is successful, redirect to the receipt page
+        let receiptUrl = `/receipt?reservationId=${reservationId}&roomId=${roomId}&checkinDate=${checkinDate}&checkoutDate=${checkoutDate}&totalPrice=${totalPrice}&status=${status}&creditCard=${creditCard}`;
+        
+        // Redirect to the receipt page
+        window.location.href = "http://127.0.0.1:8000/receipt";
+    }
+    
+        function cancelPayment() {
+            alert("Payment canceled");
+    
+            // Clear the form
+            document.getElementById("username").value = "";
+            document.getElementById("lengthOfStay").value = "0";
+            document.getElementById("location").value = "";
+            document.getElementById("creditCard").value = "";
+            document.getElementById("expiryDate").value = "";
+            document.getElementById("cvv").value = "";
+            document.getElementById("totalPrice").textContent = "0.00";
+    
+            // Redirect to the "/welcome" page
+            
+        }
+      
+        // Function to generate a random reservation ID
+        function generateRandomReservationId() {
+            // Generate a random number as a reservation ID
+            let randomNumber = Math.floor(Math.random() * 1000000); // You can adjust the range as needed
+            document.getElementById("reservationId").value = randomNumber;
+        }
 
+        // Call this function when the page loads or when needed
+        generateRandomReservationId();
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+        // Function to calculate the total price
+        function calculateTotalPrice() {
+            // Get the selected room ID
+            var roomId = document.getElementById('roomId').value;
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+            // Find the selected room in the dropdown options
+            var selectedRoomOption = document.querySelector('#roomId option[value="' + roomId + '"]');
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+            // Get the price per night of the selected room
+            var pricePerNight = parseFloat(selectedRoomOption.getAttribute('data-price'));
 
-</html>
+            // Get the check-in and check-out dates
+            var checkInDate = new Date(document.getElementById('checkInDate').value);
+            var checkOutDate = new Date(document.getElementById('checkOutDate').value);
+
+            // Calculate the number of nights
+            var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+
+            // Calculate the total price
+            var totalPrice = pricePerNight * numberOfNights;
+
+            // Update the total price field
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+        }
+
+        // Attach event listeners to the input fields
+        document.getElementById('roomId').addEventListener('change', calculateTotalPrice);
+        document.getElementById('checkInDate').addEventListener('change', calculateTotalPrice);
+        document.getElementById('checkOutDate').addEventListener('change', calculateTotalPrice);
+    </script>
+      </script>
+  
 </x-app-layout>
