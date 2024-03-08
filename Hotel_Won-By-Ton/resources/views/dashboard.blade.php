@@ -112,7 +112,7 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                     <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                    <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a href="http://127.0.0.1:8000/room2" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
                                     <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                                 </div>
                             </div>
@@ -306,7 +306,7 @@
                     </div>
                 </div>
                 <div style="text-align: center">
-                    <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="http://127.0.0.1:8000/room">View All</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="http://127.0.0.1:8000/room2">View All</a>
                 </div>
                 
             </div>
@@ -321,7 +321,7 @@
                             <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                             <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
                             <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                            <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                            <a href="http://127.0.0.1:8000/room2" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
                             <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
                         </div>
                     </div>
@@ -624,8 +624,6 @@
                         <div class="row">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                                 &copy; <a class="border-bottom" href="#">Hotel Won</a>, All Right Reserved. 
-                                
-                                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                                 Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
