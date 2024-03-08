@@ -1,42 +1,56 @@
-/* rooms.css */
-
-/* Define styles for the container */
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Adjust spacing between items */
+    gap: 20px;
 }
 
-/* Define styles for each room box */
 .vehicleCon {
+    flex: 1 0 auto;
+    padding: 20px;
     border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: calc(30% - 20px); /* Adjust width for 3 columns */
-    box-sizing: border-box;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
 }
 
-/* Define styles for the room image */
+.vehicleImage {
+    height: 200px;
+    overflow: hidden;
+}
+
 .vehicleImage img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* Optional: Add styling for the room description */
 .desc-item {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Optional: Add styling for the book now button */
 .book-now-btn {
-    background-color: #007bff;
+    background-color: #ffa500;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Optional: Add hover effect for the book now button */
 .book-now-btn:hover {
-    background-color: #0056b3;
+    background-color: #ff8c00;
+}
+
+.vehicleCon:hover {
+    transform: translateY(-5px);
+}
+
+.vehicleImage:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .vehicleCon {
+        flex-basis: calc(100% - 40px);
+    }
 }
