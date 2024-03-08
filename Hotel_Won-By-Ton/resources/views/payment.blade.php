@@ -147,108 +147,109 @@
 
     <!-- Payment start -->
     <div class="contain">
-       <form action="process_payment.php" method="post">
-        @csrf
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <form id="paymentForm" action="#" method="post">
+            @csrf <!-- Add this line to include CSRF token -->
 
-        <label for="lengthOfStay">Length of Stay (days):</label>
-        <input type="number" id="lengthOfStay" name="lengthOfStay" value="0" required>
+            <label for="reservationId">Reservation ID:</label>
+            <input type="text" id="reservationId" name="reservationId" readonly>
 
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
 
-        <label for="creditCard">Credit Card:</label>
-        <input type="text" id="creditCard" name="creditCard" placeholder="**** **** **** ****" required>
+            <label for="roomId">Room ID:</label>
+            <input type="text" id="roomId" name="roomId" required>
 
-        <label for="expiryDate">Expiry Date:</label>
-        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+            <label for="checkInDate">Check-in Date:</label>
+            <input type="date" id="checkInDate" required>
+        
+            <label for="checkOutDate">Check-out Date:</label>
+            <input type="date" id="checkOutDate" required>
 
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" placeholder="***" required>
+            <div class="total-price">Total Price: $<span id="totalPrice">0.00</span></div>
 
-        <div class="total-price">Total Price: $<span id="totalPrice">0.00</span></div>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" readonly>
 
-        <button type="button" onclick="makePayment()" id="pay">Make Payment</button>
-        <a href="http://127.0.0.1:8000/" class="btn btn-primary ">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
-    </form> 
+            <label for="creditCard">Credit Card:</label>
+            <input type="text" id="creditCard" name="creditCard" placeholder="**** **** **** ****" required>
+
+        
+            <button type="button" onclick="makePayment()"id="pay" href="http://127.0.0.1:8000/receipt">Make Payment</button>
+            <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
+        </form>
     </div>
     
 
     <script>
-       function makePayment() {
-    console.log('makePayment function called');
-
-    // Gather form data
-    let username = document.getElementById("username").value;
-    let lengthOfStay = document.getElementById("lengthOfStay").value;
-    let location = document.getElementById("location").value;
-    let creditCard = document.getElementById("creditCard").value;
-    let expiryDate = document.getElementById("expiryDate").value;
-    let cvv = document.getElementById("cvv").value;
-    let totalPrice = document.getElementById("totalPrice").textContent;
-
-    // Make an AJAX request to send form data to the server
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "process_payment.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    // Prepare the data to send
-    let data = `username=${username}&lengthOfStay=${lengthOfStay}&location=${location}&creditCard=${creditCard}&expiryDate=${expiryDate}&cvv=${cvv}&totalPrice=${totalPrice}`;
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // If the server responds successfully, redirect to the receipt page
-            let response = xhr.responseText;
-            if (response === "success") {
-                window.location.href = `/receipt?username=${username}&lengthOfStay=${lengthOfStay}&location=${location}&creditCard=${creditCard}&expiryDate=${expiryDate}&cvv=${cvv}&totalPrice=${totalPrice}`;
-            } else {
-                console.error("Payment processing failed.");
-                // Handle the error or display a message to the user
-            }
+       function generateRandomReservationId() {
+            // Generate a random number as a reservation ID
+            let randomNumber = Math.floor(Math.random() * 1000000); // You can adjust the range as needed
+            document.getElementById("reservationId").value = randomNumber;
         }
-    };
 
-    // Send the AJAX request with form data
-    xhr.send(data);
+        // Call this function when the page loads or when needed
+        generateRandomReservationId();
+
+
+      // Get references to the date inputs
+    var checkInDateInput = document.getElementById('checkInDate');
+    var checkOutDateInput = document.getElementById('checkOutDate');
+
+    // Attach the input event listeners
+    checkInDateInput.addEventListener('input', calculateStay);
+    checkOutDateInput.addEventListener('input', calculateStay);
+
+    function calculateStay() {
+      // Get the check-in and check-out date values
+      var checkInDate = new Date(checkInDateInput.value);
+      var checkOutDate = new Date(checkOutDateInput.value);
+
+      // Check if both dates are selected
+      if (!checkInDate || !checkOutDate) {
+        alert("Please select both check-in and check-out dates.");
+        return;
+      }
+
+      // Calculate the duration of stay in milliseconds
+      var durationInMs = checkOutDate - checkInDate;
+
+      // Convert the duration to days
+      var durationInDays = durationInMs / (1000 * 60 * 60 * 24);
+
+      // Display the result (you can customize this part according to your needs)
+      alert("You have selected a stay of " + durationInDays + " days.");
+    }
+    function makePayment() {
+    // Gather the data from the form
+    let reservationId = document.getElementById("reservationId").value;
+    let roomId = document.getElementById("roomId").value;
+    let checkinDate = document.getElementById("checkinDate").value;
+    let checkoutDate = document.getElementById("checkoutDate").value;
+    let totalPrice = document.getElementById("totalPrice").textContent;
+    let status = document.getElementById("status").value;
+    let creditCard = document.getElementById("creditCard").value;
+
+    // Implement the logic to send the data to your server for processing (you can use AJAX)
+    // Assuming the payment is successful, redirect to the receipt page
+    let receiptUrl = `/receipt?reservationId=${reservationId}&roomId=${roomId}&checkinDate=${checkinDate}&checkoutDate=${checkoutDate}&totalPrice=${totalPrice}&status=${status}&creditCard=${creditCard}`;
+    
+    // Redirect to the receipt page
+    window.location.href = "http://127.0.0.1:8000/receipt";
 }
 
+    function cancelPayment() {
+        alert("Payment canceled");
 
-        function calculateTotalPrice() {
-            let lengthOfStay = parseFloat(document.getElementById("lengthOfStay").value);
+        // Clear the form
+        document.getElementById("username").value = "";
+        document.getElementById("lengthOfStay").value = "0";
+        document.getElementById("location").value = "";
+        document.getElementById("creditCard").value = "";
+        document.getElementById("expiryDate").value = "";
+        document.getElementById("cvv").value = "";
+        document.getElementById("totalPrice").textContent = "0.00";
 
-            // Ensure lengthOfStay is not below 0
-            lengthOfStay = Math.max(0, lengthOfStay);
-
-            const nightlyRate = 100; // literally just add the priceid from the database to change this
-            const totalPrice = lengthOfStay * nightlyRate;
-            document.getElementById("lengthOfStay").value = lengthOfStay; // Update the input value
-            document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
-        }
-
-        document.getElementById("lengthOfStay").addEventListener("input", calculateTotalPrice);
-
-        function cancelPayment() {
-            alert("Payment canceled");
-        }
-
-        document.getElementById("lengthOfStay").addEventListener("input", calculateTotalPrice);
-
-        function cancelPayment() {
-            alert("Payment canceled");
-
-            // Clear the form
-            document.getElementById("username").value = "";
-            document.getElementById("lengthOfStay").value = "0";
-            document.getElementById("location").value = "";
-            document.getElementById("creditCard").value = "";
-            document.getElementById("expiryDate").value = "";
-            document.getElementById("cvv").value = "";
-            document.getElementById("totalPrice").textContent = "0.00";
-
-            // Redirect to the "/welcome" page
-            
-        }
+        // Redirect to the "/welcome" page
+        
+    }
     </script>
     <!-- Payment end -->
 </body>

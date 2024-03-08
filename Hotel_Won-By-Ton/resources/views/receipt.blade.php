@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Receipt</h1>
+
+    <p>Reservation ID: {{ $reservationId }}</p>
+    <p>Room ID: {{ $roomId }}</p>
+    <p>Check-in Date: {{ $checkinDate }}</p>
+    <p>Check-out Date: {{ $checkoutDate }}</p>
+    <p>Total Price: ${{ $totalPrice }}</p>
+    <p>Status: {{ $status }}</p>
+    <p>Credit Card: {{ $creditCard }}</p>
 </body>
 </html>

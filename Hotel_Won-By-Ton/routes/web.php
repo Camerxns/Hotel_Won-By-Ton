@@ -9,6 +9,7 @@ use App\Http\Controllers\roomsAPI;
 use App\Http\Controllers\users;
 use App\Http\Controllers\rooms;
 
+use App\Http\Controllers\ReceiptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,42 +69,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/booking', function () {
-    return view('booking');
-})->middleware(['auth', 'verified'])->name('booking');
-Route::get('/room2', function () {
-    return view('room2');
-})->middleware(['auth', 'verified'])->name('room2');
-Route::get('/service', function () {
-    return view('service');
-})->middleware(['auth', 'verified'])->name('service');
-Route::get('/team', function () {
-    return view('team');
-})->middleware(['auth', 'verified'])->name('team');
-Route::get('/testimonial', function () {
-    return view('testimonial');
-});
-Route::get('/signup', function () {
-    return view('signup');
-});
-Route::get('/managerAdd', function () {
-    return view('managerAdd');
-})->middleware(['auth', 'verified'])->name('managerAdd');
-Route::get('/managerDelete', function () {
-    return view('managerDelete');
-})->middleware(['auth', 'verified'])->name('managerDelete');
-Route::get('/contact', function () {
-    return view('contact');
-})->middleware(['auth', 'verified'])->name('contact');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 Route::get('/payment', function(){
     return view('payment');
@@ -112,6 +77,9 @@ Route::get('/payment', function(){
 Route::get('/popup', function () {
     return view('popup');
 })->name('popup');
+
+Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
+// mental note uncomment out or ill get simted by someone who has the sandwich of life
 
 Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
 
@@ -123,3 +91,10 @@ Route::get('/about', function () {
 Route::get('/room2', [roomsAPI::class, 'index'])->name('room2');
 
 Route::post('/managerAdd', [managerAddAPI::class, 'store'])->name('addRoom');
+// mental note uncomment out or ill get simted by someone who has the sandwich of life
+
+require __DIR__.'/auth.php';
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');
