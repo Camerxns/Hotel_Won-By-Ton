@@ -163,7 +163,8 @@
             <label for="checkOutDate">Check-out Date:</label>
             <input type="date" id="checkOutDate" required>
 
-            <div class="total-price">Total Price: $<span id="totalPrice">0.00</span></div>
+
+            <div class="total-price"> $<span class="room-price">{{$room->Price}}</span></div>
 
             <label for="status">Status:</label>
             <input type="text" id="status" name="status" readonly>
@@ -223,15 +224,18 @@
     let roomId = document.getElementById("roomId").value;
     let checkinDate = document.getElementById("checkinDate").value;
     let checkoutDate = document.getElementById("checkoutDate").value;
-    let totalPrice = document.getElementById("totalPrice").textContent;
     let status = document.getElementById("status").value;
     let creditCard = document.getElementById("creditCard").value;
 
-    // Implement the logic to send the data to your server for processing (you can use AJAX)
-    // Assuming the payment is successful, redirect to the receipt page
-    let receiptUrl = `/receipt?reservationId=${reservationId}&roomId=${roomId}&checkinDate=${checkinDate}&checkoutDate=${checkoutDate}&totalPrice=${totalPrice}&status=${status}&creditCard=${creditCard}`;
-    
-    // Redirect to the receipt page
+    // Calculate the total price by summing up all the room prices
+    // let totalPrice = 0;
+    // document.querySelectorAll('.room-price').forEach(priceSpan => {
+    //     totalPrice += parseFloat(priceSpan.textContent);
+    // });
+
+    // Redirect to the receipt page with all the data
+    // let receiptUrl = `/receipt?reservationId=${reservationId}&roomId=${roomId}&checkinDate=${checkinDate}&checkoutDate=${checkoutDate}&totalPrice=${totalPrice}&status=${status}&creditCard=${creditCard}`;
+
     window.location.href = "http://127.0.0.1:8000/receipt";
 }
 
