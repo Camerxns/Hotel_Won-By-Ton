@@ -51,9 +51,6 @@
                             <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
                                 {{ __('team') }}
                             </x-nav-link>
-                                {{-- <x-nav-link :href="route('testimonial')" :active="request()->routeIs('testimonial')">
-                                    {{ __('testimonial') }}
-                                </x-nav-link> --}}
                                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                     <x-nav-link :href="route('managerAdd')" :active="request()->routeIs('managerAdd')">
                                         {{ __('managerAdd') }}

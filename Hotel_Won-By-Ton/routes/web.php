@@ -9,6 +9,7 @@ use App\Http\Controllers\roomsAPI;
 use App\Http\Controllers\users;
 use App\Http\Controllers\rooms;
 use App\Http\Controllers\Payment;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReceiptController;
 
 /*
@@ -34,14 +35,14 @@ Route::get('/about1', function () {
 })->middleware(['auth', 'verified'])->name('about1');
 
 
-Route::get('/booking', [Payment::class,'showBookingForm'])->middleware(['auth', 'verified'])->name('booking');
+Route::get('/booking', [PaymentController::class,'showBookingForm'])->middleware(['auth', 'verified'])->name('booking');
 
 
 // Route::get('/room', function () {
 //     return view('room');
 // })->middleware(['auth', 'verified'])->name('room');
 
-Route::get('/room2', [rooms::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
+Route::get('/room2', [roomsAPI::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
 
 
 
