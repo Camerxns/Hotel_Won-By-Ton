@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <head>
@@ -257,4 +257,8 @@
     </script>
     <!-- Payment end -->
 </body>
-</html>
+</html> --}}
+
+
+
+{{-- THIS PAGE IS NOT BEING USED. DELETE AFTER VERIFYING WE HAVE EVERYTHING FROM THIS PAGE --}}

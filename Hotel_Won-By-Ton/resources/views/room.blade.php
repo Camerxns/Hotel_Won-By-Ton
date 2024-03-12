@@ -1,4 +1,4 @@
-<x-app-layout>
+{{-- <x-app-layout>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -557,4 +557,6 @@
 </body>
 
 </html>
-</x-app-layout>
+</x-app-layout> --}}
+
+{{-- PAGE IS NOT BEING USED DELETE PAGE AFTER VERIFYING WE HAVE EVERYTHING FROM IT --}}
