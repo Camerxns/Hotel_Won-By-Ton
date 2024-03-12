@@ -1,4 +1,7 @@
 <x-app-layout>
+    @if ($errors->any())
+        <h4>{{$errors->first()}}</h4>
+    @endif
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-white leading-tight text-center">
             {{ __('Hotel Managers Waiting For Approval') }}

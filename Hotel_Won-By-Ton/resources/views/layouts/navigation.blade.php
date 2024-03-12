@@ -22,7 +22,7 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 justify-content-center">
             <div class="flex">
                 <!-- Logo -->
                 <!-- Navigation Links -->
@@ -33,7 +33,7 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('about1')" :active="request()->routeIs('about1')">
-                        {{ __('about') }}
+                        {{ __('About') }}
                     </x-nav-link>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('room2')" :active="request()->routeIs('room2')">
@@ -41,27 +41,35 @@
                         </x-nav-link>
                 </div>
                     <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
-                        {{ __('service') }}
+                        {{ __('Service') }}
                     </x-nav-link>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('booking')" :active="request()->routeIs('booking')">
-                            {{ __('booking') }}
+                            {{ __('Booking') }}
                         </x-nav-link>
                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                             <x-nav-link :href="route('team')" :active="request()->routeIs('team')">
-                                {{ __('team') }}
+                                {{ __(' Meet Our Team') }}
                             </x-nav-link>
+                            @if (Auth::user()->AccessLevel === 'Manager')
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <x-nav-link :href="route('managerAdd')" :active="request()->routeIs('managerAdd')">
+                                    {{ __('Add Rooms') }}
+                                </x-nav-link>
                                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                    <x-nav-link :href="route('managerAdd')" :active="request()->routeIs('managerAdd')">
-                                        {{ __('managerAdd') }}
+                                    <x-nav-link :href="route('managerDelete')" :active="request()->routeIs('managerDelete')">
+                                        {{ __('Delete Rooms') }}
                                     </x-nav-link>
-                                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                        <x-nav-link :href="route('managerDelete')" :active="request()->routeIs('managerDelete')">
-                                            {{ __('managerDelete') }}
-                                        </x-nav-link>
+                            @endif
+                            @if (Auth::user()->AccessLevel === 'Admin')
+                            <x-nav-link :href="route('adminDashboard')" :active="request()->routeIs('adminDashboard')">
+                                {{ __('adminDashboard') }}
+                            </x-nav-link>
+                            @endif
+                                
                                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                             <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                                                {{ __('contact') }}
+                                                {{ __('Contact') }}
                                             </x-nav-link>
             </div>
 

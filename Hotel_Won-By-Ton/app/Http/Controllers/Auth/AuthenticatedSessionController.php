@@ -32,11 +32,11 @@ class AuthenticatedSessionController extends Controller
         $user = auth()->user();
 
         if ($user->AccessLevel === "Admin") {
-            return redirect()->route('about1'); // USE THIS TO REDIRECT TO ADMIN DASHBOARD
+            return redirect()->route('adminDashboard'); // USE THIS TO REDIRECT TO ADMIN DASHBOARD
         } elseif ($user->AccessLevel === "User") {
             return redirect()->route('dashboard'); // USE THIS TO REDIRECT TO USER DASHBOARD
         } elseif ($user->AccessLevel === "Manager") {
-            return redirect()->route('booking'); // USE THIS TO REDIRECT TO Manager DASHBOARD
+            return redirect()->route('dashboard'); // USE THIS TO REDIRECT TO Manager DASHBOARD
         } else {
             return redirect()->intended(RouteServiceProvider::HOME);
         }
