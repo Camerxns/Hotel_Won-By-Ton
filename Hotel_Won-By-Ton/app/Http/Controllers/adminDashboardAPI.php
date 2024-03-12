@@ -6,6 +6,8 @@ use App\Models\HotelManager;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class adminDashboardAPI extends Controller
 {
@@ -14,8 +16,14 @@ class adminDashboardAPI extends Controller
      */
     public function index()
     {
-        $dataList = HotelManager::all();
-        return view('adminDashboard', ['dataList'=>$dataList]);
+        if (Auth::user()->AccessLevel === 'Admin'){
+            $dataList = HotelManager::all();
+            return view('adminDashboard', ['dataList'=>$dataList]);
+        }
+        else{
+            return Redirect::back();
+        }
+        
     }
 
     /**
