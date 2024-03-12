@@ -21,16 +21,19 @@ class Signup_API extends Controller
      */
     public function store(Request $request)
     {
-     $request -> validate([
-        'FirstName' =>'required',
-        'LastName' =>'required',
-        'Email' => 'required',
-        'Password' => 'required',
-        'AccessLevel'=>'required'
-     ]);
+
+    // THIS IS NOT BEING USED! DELETE AFTER VERIFYING THAT WE DONT NEED ANYTHING FROM HERE
+
+    //  $request -> validate([
+    //     'FirstName' =>'required',
+    //     'LastName' =>'required',
+    //     'Email' => 'required',
+    //     'Password' => 'required',
+    //     'AccessLevel'=>'required'
+    //  ]);
      
-     User::create($request->all());
-     return redirect("/");
+    //  User::create($request->all());
+    //  return redirect("/");
     }
 
     /**

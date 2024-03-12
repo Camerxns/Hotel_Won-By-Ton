@@ -25,8 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/submit_signup', [Signup_API::class, 'store']);
 
 Route::resource('login', Login::class);
-Route::post('/addRoom', [addRoomAPI::class, 'store'])-> name('addRoom');
-Route::delete('/Room/{id}', 'App\Http\Controllers\addRoomAPI@destroy')->name('Room.destroy');
+// Route::delete('/Room/{id}', 'App\Http\Controllers\addRoomAPI@destroy')->name('Room.destroy');
 
 Route::resource('adminDashboard', adminDashboardAPI::class);
 

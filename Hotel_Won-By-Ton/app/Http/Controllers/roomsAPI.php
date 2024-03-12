@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Room;
+use Illuminate\Support\Facades\Auth;
 
 class roomsAPI extends Controller
 {
@@ -12,8 +13,10 @@ class roomsAPI extends Controller
      */
     public function index()
     {
-        $rooms = Room::all();
-        return view('room2', ['rooms'=>$rooms]);
+        if(Auth::user()->AccessLevel === 'User' || 'Manager' || 'Admin'){
+                    $rooms = Room::all();
+                return view('room2', ['rooms'=>$rooms]);
+        }
     }
 
     /**
