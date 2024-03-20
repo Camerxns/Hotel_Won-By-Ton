@@ -103,7 +103,7 @@
     
     
             <!-- Carousel Start -->
-            <div class="container-fluid p-0 mb-5">
+            {{-- <div class="container-fluid p-0 mb-5">
                 <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -140,7 +140,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
+            </div> --}}
             <!-- Carousel End -->
     
     
@@ -148,7 +148,7 @@
     
     
             <!-- About Start -->
-            <div class="container-xxl py-5">
+            {{-- <div class="container-xxl py-5">
                 <div class="container">
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6">
@@ -204,12 +204,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- About End -->
     
     
             <!-- Room Start -->
-            <div class="container-xxl py-5">
+            {{-- <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
@@ -309,8 +309,10 @@
                     <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="http://127.0.0.1:8000/room2">View All</a>
                 </div>
                 
-            </div>
+            </div> --}}
             <!-- Room End -->
+
+            
     
     
             <!-- Video Start -->
@@ -356,7 +358,7 @@
     
     
             <!-- Service Start -->
-            <div class="container-xxl py-5">
+            {{-- <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
@@ -431,7 +433,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Service End -->
     
     
@@ -479,7 +481,7 @@
     
     
             <!-- Team Start -->
-            <div class="container-xxl py-5">
+            {{-- <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
@@ -552,27 +554,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Team End -->
-    
-    
-            <!-- Newsletter Start -->
-            <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 border rounded p-1">
-                        <div class="border rounded text-center p-1">
-                            <div class="bg-white rounded text-center p-5">
-                                <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                                <div class="position-relative mx-auto" style="max-width: 400px;">
-                                    <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Newsletter Start -->
             
     
             <!-- Footer Start -->
@@ -607,14 +590,6 @@
                                     <a class="btn btn-link" href="">Terms & Condition</a>
                                     <a class="btn btn-link" href="">Support</a>
                                 </div>
-                                <div class="col-md-6">
-                                    <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                    <a class="btn btn-link" href="">Food & Restaurant</a>
-                                    <a class="btn btn-link" href="">Spa & Fitness</a>
-                                    <a class="btn btn-link" href="">Sports & Gaming</a>
-                                    <a class="btn btn-link" href="">Event & Party</a>
-                                    <a class="btn btn-link" href="">GYM & Yoga</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -624,7 +599,6 @@
                         <div class="row">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                                 &copy; <a class="border-bottom" href="#">Hotel Won</a>, All Right Reserved. 
-                                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
                                 <div class="footer-menu">

@@ -104,7 +104,9 @@
             
                 <div class="price-per-night">Price per Night: $<span id="displayPricePerNight">0.00</span></div>
             
-                <div class="total-price" name="Price">Total Price: $<span name ="Price" id="displayTotalPrice">0.00</span></div>
+                <div class="total-price">Total Price: $<span name ="Price" id="displayTotalPrice">0.00</span></div>
+                <input type="hidden" name="Price" id="Price">
+
             
                 <label for="Status">Status:</label>
                 <input type="text" id="Status" name="Status" readonly>
@@ -137,41 +139,34 @@
         
            
             function calculateTotalPrice() {
-                
                 var roomId = document.getElementById('RoomID').value;
-        
-                
                 var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
-        
                 
                 if (!selectedRoomOption) {
                     console.error("Selected room option not found.");
                     return;
                 }
-        
-                
+
                 var pricePerNight = parseFloat(selectedRoomOption.getAttribute('data-price'));
-        
-            
+                
                 if (isNaN(pricePerNight)) {
                     console.error("Invalid price per night:", selectedRoomOption.getAttribute('data-price'));
                     return;
                 }
-        
-                
+
                 var checkInDate = new Date(document.getElementById('CheckinDate').value);
                 var checkOutDate = new Date(document.getElementById('CheckoutDate').value);
-        
-               
-                var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
-        
                 
+                var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
                 var totalPrice = pricePerNight * numberOfNights;
-        
-               
+
+                // Set the value of the hidden input field
+                document.getElementById('Price').value = totalPrice.toFixed(2);
+                
                 document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
                 document.getElementById('displayTotalPrice').textContent = totalPrice.toFixed(2);
             }
+
         
            
             document.getElementById('RoomID').addEventListener('change', calculateTotalPrice);
