@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\adminDashboardAPI;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\managerAddAPI;
@@ -84,6 +85,7 @@ Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminD
 Route::get('/rooms', [roomsAPI::class, 'index'])->name('room2');
 
 Route::post('/managerAdd', [managerAddAPI::class, 'store'])->name('addRoom');
+Route::post('/reservation', [ReservationsController::class, 'store'])->name('reservation');
 // mental note uncomment out or ill get simted by someone who has the sandwich of life
 
 Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');

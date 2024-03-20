@@ -16,5 +16,7 @@
     <p>Total Price: ${{ $totalPrice }}</p>
     <p>Status: {{ $status }}</p>
     <p>Credit Card: {{ $creditCard }}</p>
+    <p>Expiration Date: {{ $Expiration }}</p>
+    <p>CVV: {{ $CVV }}</p>
 </body>
 </html>
