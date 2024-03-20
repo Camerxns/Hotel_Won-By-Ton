@@ -63,7 +63,7 @@
                             @endif
                             @if (Auth::user()->AccessLevel === 'Admin')
                             <x-nav-link :href="route('adminDashboard')" :active="request()->routeIs('adminDashboard')">
-                                {{ __('adminDashboard') }}
+                                {{ __('Admin Dashboard') }}
                             </x-nav-link>
                             @endif
                                 
