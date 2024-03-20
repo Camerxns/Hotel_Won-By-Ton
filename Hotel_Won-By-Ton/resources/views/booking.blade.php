@@ -79,148 +79,134 @@
         }
     </style>
     <body>
-        <!-- Payment start -->
+       
         <div class="contain">
-            <form id="paymentForm" action="#" method="post">
-                @csrf <!-- CSRF token -->
-    
-                <label for="reservationId">Reservation ID:</label>
-                <input type="text" id="reservationId" name="reservationId" readonly>
-    
-                <label for="roomId">Rooms:</label>
-                    <select name="roomId" id="roomId">
-                        @foreach ($rooms as $room)
-                            <option value="{{ $room->RoomID }}" data-price="{{ $room->Price }}" data-availability="{{ $room->Availability }}">{{ $room->RoomName }}</option>
-                        @endforeach
-                    </select>
-
-
-    
-                <label for="checkInDate">Check-in Date:</label>
-                <input type="date" id="checkInDate" name="checkInDate" required>
+            <form id="paymentForm" action="{{ route('reservation') }}" method="post">
+                @csrf 
             
-                <label for="checkOutDate">Check-out Date:</label>
-                <input type="date" id="checkOutDate" name="checkOutDate" required>
-    
+                <label for="ReservationID">Reservation ID:</label>
+                <input type="text" id="ReservationID" name="ReservationID" readonly>
+            
+                <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+            
+                <label for="RoomID">Room:</label>
+                <select name="RoomID" id="RoomID">
+                    @foreach ($rooms as $room)
+                        <option value="{{ $room->RoomID }}" data-price="{{ $room->Price }}" data-availability="{{ $room->Availability }}">{{ $room->RoomName }}</option>
+                    @endforeach
+                </select>
+            
+                <label for="CheckinDate">Check-in Date:</label>
+                <input type="date" id="CheckinDate" name="CheckinDate" required>
+            
+                <label for="CheckoutDate">Check-out Date:</label>
+                <input type="date" id="CheckoutDate" name="CheckoutDate" required>
+            
                 <div class="price-per-night">Price per Night: $<span id="displayPricePerNight">0.00</span></div>
-
-                <div class="total-price">Total Price: $<span id="displayTotalPrice">0.00</span></div>
-    
-                <label for="status">Status:</label>
-                <input type="text" id="status" name="status" readonly>
-    
-                <label for="creditCard">Credit Card:</label>
-                <input type="text" id="creditCard" name="creditCard" placeholder="**** **** **** ****" required>
-    
-                <button type="button" onclick="makePayment()" id="pay" href="http://127.0.0.1:8000/receipt">Make Payment</button>
+            
+                <div class="total-price" name="Price">Total Price: $<span name ="Price" id="displayTotalPrice">0.00</span></div>
+            
+                <label for="Status">Status:</label>
+                <input type="text" id="Status" name="Status" readonly>
+            
+                <label for="CreditCard">Credit Card Number:</label>
+                <input type="text" id="CreditCard" name="CreditCard" required>
+            
+                <label for="ExpirationDate">Expiration Date:</label>
+                <input type="date" id="ExpirationDate" name="ExpirationDate" required>
+            
+                <label for="CVV">CVV:</label>
+                <input type="text" id="CVV" name="CVV" placeholder="***" required>
+            
+                <button type="submit" class="btn btn-primary">Make Payment</button>
                 <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
             </form>
+            
         </div>
+        
         
         <script>
             function generateRandomReservationId() {
-                // Generate a random number as a reservation ID
-                let randomNumber = Math.floor(Math.random() * 1000000); // You can adjust the range as needed
-                document.getElementById("reservationId").value = randomNumber;
+              
+                let randomNumber = Math.floor(Math.random() * 1000000); 
+                document.getElementById("ReservationID").value = randomNumber;
             }
-    
-            // Call this function when the page loads or when needed
+        
+            
             generateRandomReservationId();
-    
-            // Function to calculate the total price
+        
+           
             function calculateTotalPrice() {
-        // Get the selected room ID
-        var roomId = document.getElementById('roomId').value;
-
-        // Find the selected room in the dropdown options
-        var selectedRoomOption = document.querySelector('#roomId option[value="' + roomId + '"]');
-        
-        // Ensure the selected room option is found
-        if (!selectedRoomOption) {
-            console.error("Selected room option not found.");
-            return;
-        }
-
-        // Get the price per night of the selected room
-        var pricePerNight = parseFloat(selectedRoomOption.getAttribute('data-price'));
-        
-        // Ensure the price per night is valid
-        if (isNaN(pricePerNight)) {
-            console.error("Invalid price per night:", selectedRoomOption.getAttribute('data-price'));
-            return;
-        }
-
-        console.log("Price per night:", pricePerNight); // Debug output
-
-        // Get the check-in and check-out dates
-        var checkInDate = new Date(document.getElementById('checkInDate').value);
-        var checkOutDate = new Date(document.getElementById('checkOutDate').value);
-
-        // Calculate the number of nights
-        var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
-        console.log("Number of nights:", numberOfNights); // Debug output
-
-        // Calculate the total price
-        var totalPrice = pricePerNight * numberOfNights;
-        console.log("Total price:", totalPrice); // Debug output
-
-        // Update the price per night and total price displays
-        document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
-        document.getElementById('displayTotalPrice').textContent = totalPrice.toFixed(2);
-    }
-    
-            // Attach event listeners to the input fields
-            document.getElementById('roomId').addEventListener('change', calculateTotalPrice);
-            document.getElementById('checkInDate').addEventListener('change', calculateTotalPrice);
-            document.getElementById('checkOutDate').addEventListener('change', calculateTotalPrice);
-    
-            // Call the function initially to calculate the total price with default values
-            calculateTotalPrice();
-    
-            // Function to make payment
-            function makePayment() {
-                // Gather the data from the form
-                let reservationId = document.getElementById("reservationId").value;
-                let roomId = document.getElementById("roomId").value;
-                let checkinDate = document.getElementById("checkInDate").value;
-                let checkoutDate = document.getElementById("checkOutDate").value;
-                let totalPrice = document.getElementById("displayTotalPrice").textContent; // Fixed ID here
-                let status = document.getElementById("status").value;
-                let creditCard = document.getElementById("creditCard").value;
-    
-                // Implement the logic to send the data to your server for processing (you can use AJAX)
-                // Assuming the payment is successful, redirect to the receipt page
-                let receiptUrl = `/receipt?reservationId=${reservationId}&roomId=${roomId}&checkinDate=${checkinDate}&checkoutDate=${checkoutDate}&totalPrice=${totalPrice}&status=${status}&creditCard=${creditCard}`;
                 
-                // Redirect to the receipt page
-                window.location.href = receiptUrl; // Fixed redirect URL here
-            }
-
-            function updateStatus() {
-        // Get the selected room ID
-        var roomId = document.getElementById('roomId').value;
-
-        // Find the selected room option in the dropdown
-        var selectedRoomOption = document.querySelector('#roomId option[value="' + roomId + '"]');
+                var roomId = document.getElementById('RoomID').value;
         
-        // Ensure the selected room option is found
-        if (!selectedRoomOption) {
-            console.error("Selected room option not found.");
-            return;
-        }
-
-        // Get the availability of the selected room
-        var availability = selectedRoomOption.getAttribute('data-availability');
-
-        // Update the status field
-        document.getElementById('status').value = availability;
-    }
-
-    // Attach event listener to the room selection dropdown
-    document.getElementById('roomId').addEventListener('change', updateStatus);
-
-    // Call the function initially to update the status with default values
-    updateStatus();
+                
+                var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
+        
+                
+                if (!selectedRoomOption) {
+                    console.error("Selected room option not found.");
+                    return;
+                }
+        
+                
+                var pricePerNight = parseFloat(selectedRoomOption.getAttribute('data-price'));
+        
+            
+                if (isNaN(pricePerNight)) {
+                    console.error("Invalid price per night:", selectedRoomOption.getAttribute('data-price'));
+                    return;
+                }
+        
+                
+                var checkInDate = new Date(document.getElementById('CheckinDate').value);
+                var checkOutDate = new Date(document.getElementById('CheckoutDate').value);
+        
+               
+                var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+        
+                
+                var totalPrice = pricePerNight * numberOfNights;
+        
+               
+                document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
+                document.getElementById('displayTotalPrice').textContent = totalPrice.toFixed(2);
+            }
+        
+           
+            document.getElementById('RoomID').addEventListener('change', calculateTotalPrice);
+            document.getElementById('CheckinDate').addEventListener('change', calculateTotalPrice);
+            document.getElementById('CheckoutDate').addEventListener('change', calculateTotalPrice);
+        
+            
+            calculateTotalPrice();
+        
+            function updateStatus() {
+                
+                var roomId = document.getElementById('RoomID').value;
+        
+                
+                var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
+        
+               
+                if (!selectedRoomOption) {
+                    console.error("Selected room option not found.");
+                    return;
+                }
+        
+                
+                var availability = selectedRoomOption.getAttribute('data-availability');
+        
+              
+                document.getElementById('Status').value = availability;
+            }
+        
+           
+            document.getElementById('RoomID').addEventListener('change', updateStatus);
+        
+            
+            updateStatus();
         </script>
+
     </body>
 </x-app-layout>

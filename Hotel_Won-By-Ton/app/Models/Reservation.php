@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = [
         'ReservationID',
         'ConfirmationID',
@@ -17,6 +18,8 @@ class Reservation extends Model
         'CheckoutDate',
         'Price',
         'Status',
-        'CreditCard'
+        'CreditCard',
+        'ExpirationDate',
+        'CVV'
     ];
 }
