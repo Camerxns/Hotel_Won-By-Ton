@@ -73,6 +73,14 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+Route::get('/reservations', [ReservationsController::class, 'show'])->name('reservations.show');
+
+
+
+
+
+
 Route::get('/popup', function () {
     return view('popup');
 })->name('popup');

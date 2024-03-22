@@ -103,7 +103,7 @@
     
     
             <!-- Carousel Start -->
-            {{-- <div class="container-fluid p-0 mb-5">
+            <div class="container-fluid p-0 mb-5">
                 <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -112,7 +112,7 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                     <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                    <a href="http://127.0.0.1:8000/room2" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a href="http://127.0.0.1:8000/rooms" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
                                     <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                     <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                    <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a href="http://127.0.0.1:8000/rooms" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
                                     <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div> --}}
+            </div>
             <!-- Carousel End -->
     
     
