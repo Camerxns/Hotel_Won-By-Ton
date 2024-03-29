@@ -14,6 +14,7 @@
         <div class="container">
             <div class="row p-3">
                 @foreach($rooms as $room)
+                @if ($room->Availability == 'Available')
                     <div class="col-lg-4 mb-3"> 
                         <div class="vehicleCon">
                             <div class="border-end">
@@ -30,6 +31,7 @@
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                     @if($loop->iteration % 3 == 0 || $loop->last)

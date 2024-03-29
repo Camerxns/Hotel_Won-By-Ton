@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Reservation;
+use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,19 +12,12 @@ class ReservationsController extends Controller
 {
     public function store(Request $request)
     {
-          $request -> validate([
-        'ReservationID' =>'required',
-        'RoomID' =>'required',
-        'CheckinDate' => 'required',
-        'CheckoutDate' => 'required',
-        'Price'=>'required',
-        'status'=>'required',
-        'ConfirmationID'=>'required',
-        'CreditCard'=>'required',
-        'ExpirationDate'=>'required'
-     ]);
-
      Reservation::create($request->all());
+
+     $room = Room::findOrFail($request->input('RoomID'));
+     $room->Availability = 'Unavailable';
+     $room->save();
+
      return redirect()->back()->with('success', 'Room booked successfully');
     }
     public function show(Request $request)
@@ -35,4 +29,22 @@ class ReservationsController extends Controller
 
     return view('showReservations', ['reservations' => $reservations]);
 }
+
+    public function destroy(String $id, Request $request){
+        $reservationToDelete = Reservation::find($id);
+
+        if ($reservationToDelete) {
+            $room = Room::find($reservationToDelete->RoomID);
+            if ($room) {
+                $room->Availability = 'Available';
+                $room->save();
+            }
+            $reservationToDelete->delete();
+            return redirect()->back();
+        } else {
+            return response()->json(['error' => 'Record not found'], 404);
+        }
+
+
+    }
 }

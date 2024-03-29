@@ -3,6 +3,7 @@
 use App\Http\Controllers\adminDashboardAPI;
 use App\Http\Controllers\Signup_API;
 use App\Http\Controllers\rooms;
+use App\Http\Controllers\ReservationsController;
 use App\Http\Controllers\addRoomAPI;
 use App\Http\Controllers\Login;
 use Illuminate\Http\Request;
@@ -31,6 +32,11 @@ Route::resource('adminDashboard', adminDashboardAPI::class);
 
 Route::get('/admin-dashboard', [adminDashboardAPI::class, 'index'])->name('admin.dashboard');
 Route::post('/admin-dashboard/{id}/store', [adminDashboardAPI::class, 'store'])->name('admin.dashboard.store');
-Route::delete('/admin-dashboard/{id}', [adminDashboardAPI::class, 'destroy'])->name('admin.dashboard.destroy');
+Route::delete('/adminDashboard/{id}', [adminDashboardAPI::class, 'destroy'])->name('admin.dashboard.destroy');
+
+Route::resource('reservations', ReservationsController::class);
+
+
+// Route::delete('/admin-dashboard/{id}', [ReservationsController::class, 'destroy'])->name('admin.dashboard.destroy');
 
 Route::delete('/Room/{id}', 'App\Http\Controllers\managerAddAPI@destroy')->name('Room.destroy');
