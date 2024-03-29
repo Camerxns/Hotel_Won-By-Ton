@@ -1,56 +1,90 @@
-.container {
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#roomContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .vehicleCon {
-    flex: 1 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f8f9fa;
+    flex: 1 0 calc(33.33% - 20px);
+    margin: 10px; /* Adjust the margin to add space around each room */
+    border: 1px solid #ddd;
+    background-color: #fff;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Add display flex to center button */
+    flex-direction: column; /* Align items in column direction */
+    justify-content: space-between; /* Space evenly */
 }
 
 .vehicleImage {
     height: 200px;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .vehicleImage img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .desc-item {
     margin-bottom: 10px;
-    color: #333;
+    color: #555;
 }
 
 .book-now-btn {
-    background-color: #ffa500;
+    background-color: orangered;
     color: #fff;
-    border: none;
+    border: 2px solid orangered;
     padding: 10px 20px;
+    border-radius: 20px; /* Increase border-radius for more rounded corners */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center; /* Align button to center */
+    margin-left: 120px;
 }
 
 .book-now-btn:hover {
-    background-color: #ff8c00;
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
 .vehicleCon:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .vehicleImage:hover img {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .vehicleCon {
-        flex-basis: calc(100% - 40px);
-    }
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: orange;
 }
