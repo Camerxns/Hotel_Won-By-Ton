@@ -88,7 +88,7 @@ Route::get('/popup', function () {
 Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
 // mental note uncomment out or ill get simted by someone who has the sandwich of life
 
-Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
+// Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
 
 Route::get('/rooms', [roomsAPI::class, 'index'])->name('room2');
 

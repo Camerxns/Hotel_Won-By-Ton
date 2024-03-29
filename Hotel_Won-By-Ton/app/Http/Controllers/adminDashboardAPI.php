@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\HotelManager;
+use App\Models\Reservation;
+use App\Models\Room;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +20,8 @@ class adminDashboardAPI extends Controller
     {
         if (Auth::user()->AccessLevel === 'Admin'){
             $dataList = HotelManager::all();
-            return view('adminDashboard', ['dataList'=>$dataList]);
+            $reservationList = Reservation::all();
+            return view('adminDashboard', ['dataList'=>$dataList, 'reservationList'=>$reservationList]);
         }
         else{
             return Redirect::back();
@@ -67,14 +70,18 @@ class adminDashboardAPI extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id, Request $request)
     {
         $recordToDelete = HotelManager::find($id);
-        if ($recordToDelete) {
-            $recordToDelete->delete();
-            return response()->json(['message' => 'Data deleted successfully'], 200);
-        } else {
+
+        if (!$recordToDelete) {
             return response()->json(['error' => 'Record not found'], 404);
         }
+    
+        $recordToDelete->delete();
+    
+        
+    
+        return response()->json(['message' => 'Data deleted successfully'], 200);
     }
 }
