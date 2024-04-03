@@ -20,10 +20,7 @@
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-in Date</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-out Date</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Paid</th>
-<<<<<<< Updated upstream
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
-=======
->>>>>>> Stashed changes
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
@@ -33,9 +30,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->RoomID }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckinDate }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckoutDate }}</td>
-<<<<<<< Updated upstream
                                         <td class="px-6 py-4 whitespace-nowrap">${{ $reservation->Price }}</td>
-=======
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->Price }}</td>
                                         <td><form action="{{ route('reservations.destroy', $reservation->ReservationID) }}" method="post">
                                             @csrf
@@ -46,7 +41,6 @@
                                                 </svg>
                                             </button>
                                         </form></td>
->>>>>>> Stashed changes
                                     </tr>
                                 @endforeach
                             </tbody>
