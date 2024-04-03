@@ -25,6 +25,7 @@
                     <div class="desc-item">RoomType: {{ $room->RoomType }}</div>
                     <div class="desc-item">Description: {{ $room->Description }}</div>
                     <div class="desc-item">Availability: {{ $room->Availability }}</div>
+                    <div class="desc-item">Price Per Night: ${{ $room->Price }}</div>
                     <div class="button-container">
                         <a class="btn btn-sm btn-dark rounded py-2 px-4 book-now-btn" href="http://127.0.0.1:8000/booking">Book Now</a>
                     </div>
