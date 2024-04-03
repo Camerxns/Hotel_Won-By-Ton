@@ -74,6 +74,12 @@ Route::middleware('auth')->group(function () {
 
 
 
+
+
+
+
+
+
 Route::get('/reservations', [ReservationsController::class, 'show'])->name('reservations.show');
 
 

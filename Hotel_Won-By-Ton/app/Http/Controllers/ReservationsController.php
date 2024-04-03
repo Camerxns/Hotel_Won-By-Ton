@@ -8,8 +8,10 @@ use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class ReservationsController extends Controller
 {
+  
     public function store(Request $request)
     {
      Reservation::create($request->all());
@@ -47,4 +49,8 @@ class ReservationsController extends Controller
 
 
     }
+    
+    
+     
+  
 }
