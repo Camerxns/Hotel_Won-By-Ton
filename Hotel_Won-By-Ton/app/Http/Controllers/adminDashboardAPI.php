@@ -34,15 +34,16 @@ class adminDashboardAPI extends Controller
      */
     public function store(Request $request, string $id)
 {
-    User::create([
-        'name' => $request->input('name'),
-        'email' => $request->input('email'),
-        'password' => Hash::make($request->input('password')),
-        'AccessLevel' => $request->input('AccessLevel')
-    ]);
-
     $hotelManager = HotelManager::find($id);
     if ($hotelManager) {
+        $user = new User();
+        $user->name = $hotelManager->name;
+        $user->email = $hotelManager->email;
+        $user->password = $hotelManager->password;
+        $user->AccessLevel = $hotelManager->AccessLevel;
+    
+        $user->save();
+    
         $hotelManager->delete();
         return response()->json(['message' => 'Data added and deleted successfully'], 200);
     } else {
