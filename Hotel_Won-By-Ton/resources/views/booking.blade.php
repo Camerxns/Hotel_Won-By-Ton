@@ -120,7 +120,7 @@
                 <label for="CVV">CVV:</label>
                 <input type="text" id="CVV" name="CVV" placeholder="***" required>
             
-                <button type="submit" class="btn btn-primary">Make Payment</button>
+                <button id="paymentButton" type="submit" class="btn btn-primary">Make Payment</button>
                 <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
             </form>
             
@@ -177,30 +177,32 @@
             calculateTotalPrice();
         
             function updateStatus() {
-                
-                var roomId = document.getElementById('RoomID').value;
+        var roomId = document.getElementById('RoomID').value;
+        var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
         
-                
-                var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
-        
-               
-                if (!selectedRoomOption) {
-                    console.error("Selected room option not found.");
-                    return;
-                }
-        
-                
-                var availability = selectedRoomOption.getAttribute('data-availability');
-        
-              
-                document.getElementById('Status').value = availability;
-            }
-        
-           
-            document.getElementById('RoomID').addEventListener('change', updateStatus);
-        
-            
-            updateStatus();
+        if (!selectedRoomOption) {
+            console.error("Selected room option not found.");
+            return;
+        }
+
+        var availability = selectedRoomOption.getAttribute('data-availability');
+
+        document.getElementById('Status').value = availability;
+
+        if (availability === 'Unavailable') {
+            // Hide the Make Payment button
+            document.getElementById('paymentButton').style.display = 'none';
+            // Display an alert
+            alert('This room is currently unavailable. Please choose another room.');
+        } else {
+            // Show the Make Payment button
+            document.getElementById('paymentButton').style.display = 'block';
+        }
+    }
+
+    document.getElementById('RoomID').addEventListener('change', updateStatus);
+
+    updateStatus();
         </script>
 
     </body>

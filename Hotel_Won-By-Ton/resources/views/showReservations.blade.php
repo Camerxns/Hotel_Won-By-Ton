@@ -20,7 +20,7 @@
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-in Date</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-out Date</th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Paid</th>
-                                   
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
@@ -30,7 +30,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->RoomID }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckinDate }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckoutDate }}</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->Price }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">${{ $reservation->Price }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
