@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+                    <h1 class="mb-5" style="color: white">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Rooms & Appartment</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our rooms are of the highest quality to our customers</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Eat and dine at our exqusit dining selection from our numorous locations</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Spa & Fitness</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Relax at our quality spas, or hit the gym at our resorts</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Sports & Gaming</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">We have all sorts of entertainment for all ages </p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Event & Party</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">For those night owls, be prepared for our extravagent events that will surly have you in awe</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">GYM & Yoga</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">For the more disiplined of our cilents we have options that include activities that will fit your more rigorous life style</p>
                         </a>
                     </div>
                 </div>
@@ -125,38 +125,38 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl testimonial mt-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
+        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="owl-carousel testimonial-carousel py-5">
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>I love playing apex legends all day and buying hierlooms to show on my verey famouse stream. BTW I am so glad that my mommy bought all these hierlooms for me so I feel complete, I love my moms credit card!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/image.png" style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Zach Skibidi</h6>
+                                <small>Professional Yapper</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>Meow</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/IMG_9143.png" style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Meow Webhead</h6>
+                                <small>Weak immune system</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <p>I love making cabinets for this company espacially if there is children involved</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/blake.jpg" style="width: 45px; height: 45px;">
                             <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="fw-bold mb-1">Blockhead</h6>
+                                <small>Cabinet tester</small>
                             </div>
                         </div>
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
@@ -167,7 +167,7 @@
         <!-- Testimonial End -->
 
 
-        <!-- Newsletter Start -->
+        {{-- <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
@@ -183,12 +183,12 @@
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Newsletter Start --> --}}
         
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
+            {{-- <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
@@ -231,15 +231,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Hotel Won by Ton</a>, All Right Reserved. 
 							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+						
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

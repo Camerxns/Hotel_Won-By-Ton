@@ -10,6 +10,88 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </head>
+<style>
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .vehicleCon {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .vehicleImage {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .vehicleImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .desc-item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .button-container {
+        padding: 10px;
+        text-align: center; /* Center align buttons */
+    }
+
+    .book-now-btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #007bff; /* Change button color */
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .book-now-btn:hover {
+        background-color: #0056b3; /* Change button hover color */
+        border-color: #0056b3; /* Change button hover border color */
+    }
+
+    @media (max-width: 992px) {
+        .col-lg-4 {
+            flex: 0 0 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .col-lg-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
 <body>
     <div class="container" id="roomContainer">
         @foreach($rooms as $room)
@@ -21,10 +103,10 @@
                     </div>
                 </div>
                 <div data-bs-toggle="modal" data-bs-target="#{{ $room->RoomName }}{{ $room->RoomType }}{{ $room->Description }}">
-                    <div class="desc-item">RoomName: {{ $room->RoomName }}</div>
-                    <div class="desc-item">RoomType: {{ $room->RoomType }}</div>
-                    <div class="desc-item">Description: {{ $room->Description }}</div>
-                    <div class="desc-item">Availability: {{ $room->Availability }}</div>
+                    <div class="desc-item"> {{ $room->RoomName }}</div>
+                    <div class="desc-item"> {{ $room->RoomType }}</div>
+                    <div class="desc-item"> {{ $room->Description }}</div>
+                    <div class="desc-item"> {{ $room->Availability }}</div>
                     <div class="desc-item">Price Per Night: ${{ $room->Price }}</div>
                     <div class="button-container">
                         <a class="btn btn-sm btn-dark rounded py-2 px-4 book-now-btn" href="http://127.0.0.1:8000/booking">Book Now</a>

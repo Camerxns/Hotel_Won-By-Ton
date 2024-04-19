@@ -322,7 +322,7 @@
                         <div class="p-5">
                             <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                             <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
-                            <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <p class="text-white mb-4">We offer some of the best hotel on the market. There are a TON of Hotels but only ONE is suited for YOU! We offer that in our simple to use website, that will not only give you the place you are looking for but the price thats just right!</p>
                             <a href="http://127.0.0.1:8000/room2" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
                             <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
                         </div>
@@ -453,23 +453,23 @@
                             <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                         </div>
                         <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                            <p>Meow</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                                <img class="img-fluid flex-shrink-0 rounded" src="img/IMG_9143.png" style="width: 45px; height: 45px;">
                                 <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Client Name</h6>
-                                    <small>Profession</small>
+                                    <h6 class="fw-bold mb-1">Meow Webhead</h6>
+                                    <small>Weak immune system</small>
                                 </div>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                         </div>
                         <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                            <p>I love making cabinets for this company espacially if there is children envolved</p>
                             <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                                <img class="img-fluid flex-shrink-0 rounded" src="img/blake.jpg" style="width: 45px; height: 45px;">
                                 <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Client Name</h6>
-                                    <small>Profession</small>
+                                    <h6 class="fw-bold mb-1">Blockhead</h6>
+                                    <small>Cabinet tester</small>
                                 </div>
                             </div>
                             <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
@@ -560,7 +560,7 @@
     
             <!-- Footer Start -->
             <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-                <div class="container pb-5">
+                {{-- <div class="container pb-5">
                     <div class="row g-5">
                         <div class="col-md-6 col-lg-4">
                             <div class="bg-primary rounded p-4">
@@ -593,7 +593,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="container">
                     <div class="copyright">
                         <div class="row">

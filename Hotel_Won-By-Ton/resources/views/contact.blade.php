@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
-                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                    <h1 class="mb-5" style="color: white"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-12">
@@ -71,9 +71,10 @@
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6108.950701750875!2d-76.33059292348898!3d40.042491678331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6245d245f7223%3A0xdfd8baf00d3526b9!2s1042%20Marietta%20Ave%2C%20Lancaster%2C%20PA%2017603!5e0!3m2!1sen!2sus!4v1712777518468!5m2!1sen!2sus"
                             frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
+                            tabindex="0">
+                        </iframe>
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -116,7 +117,7 @@
         <!-- Contact End -->
 
 
-        <!-- Newsletter Start -->
+        {{-- <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
@@ -132,12 +133,12 @@
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Newsletter Start --> --}}
         
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container pb-5">
+            {{-- <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
@@ -180,12 +181,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Hotel Won by Ton</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>

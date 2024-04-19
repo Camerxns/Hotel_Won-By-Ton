@@ -32,7 +32,12 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<style>
+    #staffimg{
+       height: 400px;
+       width: 100%;
+    }
+</style>
 <body>
     <div >
         <!-- Spinner Start -->
@@ -51,13 +56,13 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                    <h1 class="mb-5" style="color: white">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid" src="img/IMG_0048.png" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -65,15 +70,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0"  style="color: white">Skibs</h5>
+                                <small>Customer consultant</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                <img class="img-fluid" src="img/Case.jpg" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -81,15 +86,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0"  style="color: white">Case Oh</h5>
+                                <small>food connoisseur</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid" src="img/jon.jpg" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -97,15 +102,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0"  style="color: white">Jong Cope</h5>
+                                <small>Leader of the Jongweon Mafia</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <img class="img-fluid" src="img/Jakob.png" alt=""  id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -113,15 +118,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0" style="color: white">Jake Ganger</h5>
+                                <small>Lancaster Jit / Ganger / Gooner</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                <img class="img-fluid" src="img/diversity.jpg" alt=""  id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -129,15 +134,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0" style="color: white">Herbert</h5>
+                                <small>Historic importance recognizer</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                <img class="img-fluid" src="img/itguy.jpg" alt=""  id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -145,15 +150,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0" style="color: white">Cam Newtron</h5>
+                                <small>IT guy</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                <img class="img-fluid" src="img/oldmanmax.jpg" alt=""  id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -161,15 +166,15 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h6 class="fw-bold mb-0" style="color: white">Gerhard Francis Roman III</h6>
+                                <small>definitely associated with the CIA</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid" src="img/tren.jpg" alt=""  id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -177,8 +182,8 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+                                <h5 class="fw-bold mb-0" style="color: white">Trenner</h5>
+                                <small>Tren</small>
                             </div>
                         </div>
                     </div>
@@ -188,7 +193,7 @@
         <!-- Team End -->
 
 
-        <!-- Newsletter Start -->
+        {{-- <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
@@ -204,11 +209,11 @@
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Newsletter Start --> --}}
         
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+       {{--  <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
@@ -218,8 +223,8 @@
 								Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
 							</p>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
+                    </div> --}}
+                    {{-- <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
@@ -229,8 +234,8 @@
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+                        </div> --}}
+                    {{-- </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
@@ -257,7 +262,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">Hotel Won by Ton</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
@@ -273,7 +278,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Footer End -->
 
 

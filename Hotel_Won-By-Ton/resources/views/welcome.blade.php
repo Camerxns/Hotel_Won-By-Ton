@@ -479,7 +479,7 @@
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>I love making cabinets for this company espacially if there is children envolved</p>
+                        <p>I love making cabinets for this company espacially if there is children involved</p>
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded" src="img/blake.jpg" style="width: 45px; height: 45px;">
                             <div class="ps-3">
@@ -573,7 +573,7 @@
         <!-- Team End -->
 
 
-        <!-- Newsletter Start -->
+        {{-- <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
@@ -589,11 +589,11 @@
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Newsletter Start --> --}}
         
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        {{-- <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
@@ -635,7 +635,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="container">
                 <div class="copyright">
                     <div class="row">

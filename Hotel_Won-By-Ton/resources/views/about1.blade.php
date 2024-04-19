@@ -31,6 +31,12 @@
     
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+            #staffimg{
+               height: 400px;
+               width: 100%;
+            }
+        </style>
     </head>
     
     <body>
@@ -50,14 +56,14 @@
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6">
                             <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                            <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hotelier</span></h1>
-                            <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <h1 class="mb-4" style="color: white">Welcome to <span class="text-primary text-uppercase">Hotelier</span></h1>
+                            <p class="mb-4">We offer some of the best hotel on the market. There are a TON of Hotels but only ONE is suited for YOU! We offer that in our simple to use website, that will not only give you the place you are looking for but the price thats just right!</p>
                             <div class="row g-3 pb-4">
                                 <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="border rounded p-1">
                                         <div class="border rounded text-center p-4">
                                             <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                            <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                            <h2 class="mb-1" data-toggle="counter-up" style="color: white">102,234</h2>
                                             <p class="mb-0">Rooms</p>
                                         </div>
                                     </div>
@@ -66,7 +72,7 @@
                                     <div class="border rounded p-1">
                                         <div class="border rounded text-center p-4">
                                             <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                            <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                            <h2 class="mb-1" data-toggle="counter-up" style="color: white">40,000</h2>
                                             <p class="mb-0">Staffs</p>
                                         </div>
                                     </div>
@@ -75,7 +81,7 @@
                                     <div class="border rounded p-1">
                                         <div class="border rounded text-center p-4">
                                             <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                            <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                            <h2 class="mb-1" data-toggle="counter-up" style="color: white">537,485</h2>
                                             <p class="mb-0">Clients</p>
                                         </div>
                                     </div>
@@ -110,13 +116,13 @@
                 <div class="container">
                     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                        <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                        <h1 class="mb-5" style="color: white">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
                     </div>
                     <div class="row g-4">
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="rounded shadow overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                    <img class="img-fluid" src="img/IMG_0048.png" alt="" id="staffimg">
                                     <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -124,15 +130,15 @@
                                     </div>
                                 </div>
                                 <div class="text-center p-4 mt-3">
-                                    <h5 class="fw-bold mb-0">Full Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="fw-bold mb-0" style="color: white">Skibs Master</h5>
+                                    <small>Human Reasources</small>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="rounded shadow overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="img/team-2.jpg" alt="">
+                                    <img class="img-fluid" src="img/Case.jpg" alt="" id="staffimg">
                                     <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -140,15 +146,15 @@
                                     </div>
                                 </div>
                                 <div class="text-center p-4 mt-3">
-                                    <h5 class="fw-bold mb-0">Full Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="fw-bold mb-0" style="color: white">Case oh</h5>
+                                    <small>Taste tester</small>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="rounded shadow overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="img/team-3.jpg" alt="">
+                                    <img class="img-fluid" src="img/Jon.jpg" alt="" id="staffimg">
                                     <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -156,15 +162,15 @@
                                     </div>
                                 </div>
                                 <div class="text-center p-4 mt-3">
-                                    <h5 class="fw-bold mb-0">Full Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="fw-bold mb-0" style="color: white">Jong Cope</h5>
+                                    <small>Leader of the Jongweon Mafia</small>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="rounded shadow overflow-hidden">
                                 <div class="position-relative">
-                                    <img class="img-fluid" src="img/team-4.jpg" alt="">
+                                    <img class="img-fluid" src="img/Jakob.png" alt="" id="staffimg">
                                     <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                                         <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -172,8 +178,8 @@
                                     </div>
                                 </div>
                                 <div class="text-center p-4 mt-3">
-                                    <h5 class="fw-bold mb-0">Full Name</h5>
-                                    <small>Designation</small>
+                                    <h5 class="fw-bold mb-0" style="color: white">Jake Ganger</h5>
+                                    <small>Lancaster Jit / Ganger / Gooner</small>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +210,7 @@
     
             <!-- Footer Start -->
             <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
-                <div class="container pb-5">
+                {{-- <div class="container pb-5">
                     <div class="row g-5">
                         <div class="col-md-6 col-lg-4">
                             <div class="bg-primary rounded p-4">
@@ -247,12 +253,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="container">
                     <div class="copyright">
                         <div class="row">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                                &copy; <a class="border-bottom" href="#">Hotel Won by Ton</a>, All Right Reserved. 
                                 
                                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                                 Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
