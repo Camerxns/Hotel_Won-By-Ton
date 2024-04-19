@@ -31,7 +31,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckinDate }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->CheckoutDate }}</td>
                                         <td class="px-6 py-4 whitespace-nowrap">${{ $reservation->Price }}</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">{{ $reservation->Price }}</td>
+                                    
                                         <td><form action="{{ route('reservations.destroy', $reservation->ReservationID) }}" method="post">
                                             @csrf
                                             @method('DELETE')
@@ -51,6 +51,4 @@
         </div>
 
     </div>
-  
-
 </x-app-layout>

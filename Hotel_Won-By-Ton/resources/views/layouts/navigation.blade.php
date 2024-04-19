@@ -95,7 +95,9 @@
                         <x-dropdown-link :href="route('reservations.show')">
                             {{ __('Reservations') }}
                         </x-dropdown-link>
-
+                        <x-dropdown-link :href="route('rewards.index')">
+                            {{ __('rewards') }}
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -143,6 +145,9 @@
                 </x-responsive-nav-link>
                 <x-dropdown-link :href="route('reservations.show')">
                     {{ __('Reservations') }}
+                </x-dropdown-link>
+                <x-dropdown-link :href="route('rewards.index')">
+                    {{ __('rewards') }}
                 </x-dropdown-link>
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

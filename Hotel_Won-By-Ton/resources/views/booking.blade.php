@@ -79,11 +79,12 @@
         }
     </style>
     <body>
+      
        
         <div class="contain">
             <form id="paymentForm" action="{{ route('reservation') }}" method="post">
                 @csrf 
-            
+                <div id="errorMessage" style="color: red; margin-top: 10px; display: none;">This room is booked. Please select another room.</div>
                 <label for="ReservationID">Reservation ID:</label>
                 <input type="text" id="ReservationID" name="ReservationID" readonly>
             
@@ -106,7 +107,9 @@
             
                 <div class="total-price">Total Price: $<span name ="Price" id="displayTotalPrice">0.00</span></div>
                 <input type="hidden" name="Price" id="Price">
-
+                <div  type="hidden" style="display: none;"><span name ="Price" id="displayDiscount"></span></div>
+               
+                <p>You Will be Rewarded 100 points every purchase !</p>
             
                 <label for="Status">Status:</label>
                 <input type="text" id="Status" name="Status" readonly>
@@ -119,26 +122,33 @@
             
                 <label for="CVV">CVV:</label>
                 <input type="text" id="CVV" name="CVV" placeholder="***" required>
-            
+                <div>Current Points: {{ Auth::user()->points }}</div>
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <label for="applyPointsCheckbox">Apply Points</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="checkbox" id="applyPointsCheckbox" name="applyPointsCheckbox">
+                    </div>
+                </div>
                 <button id="paymentButton" type="submit" class="btn btn-primary">Make Payment</button>
                 <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
+                <input type="hidden" id="deductedPoints" name="deductedPoints" value="">
+
             </form>
-            
         </div>
-        
+       
         
         <script>
             function generateRandomReservationId() {
-              
                 let randomNumber = Math.floor(Math.random() * 1000000); 
                 document.getElementById("ReservationID").value = randomNumber;
             }
         
-            
             generateRandomReservationId();
         
-           
             function calculateTotalPrice() {
+                console.log("calculateTotalPrice function is running");
                 var roomId = document.getElementById('RoomID').value;
                 var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
                 
@@ -146,64 +156,80 @@
                     console.error("Selected room option not found.");
                     return;
                 }
-
+        
                 var pricePerNight = parseFloat(selectedRoomOption.getAttribute('data-price'));
                 
                 if (isNaN(pricePerNight)) {
                     console.error("Invalid price per night:", selectedRoomOption.getAttribute('data-price'));
                     return;
                 }
-
+        
                 var checkInDate = new Date(document.getElementById('CheckinDate').value);
                 var checkOutDate = new Date(document.getElementById('CheckoutDate').value);
                 
                 var numberOfNights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
                 var totalPrice = pricePerNight * numberOfNights;
-
-                // Set the value of the hidden input field
-                document.getElementById('Price').value = totalPrice.toFixed(2);
-                
-                document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
-                document.getElementById('displayTotalPrice').textContent = totalPrice.toFixed(2);
-            }
+        
+                var applyPoints = document.getElementById('applyPointsCheckbox').checked;
+                var discountAmount = applyPoints ? Math.min(totalPrice, {{ Auth::user()->points }} * 0.01) : 0;
+                var finalPrice = totalPrice - discountAmount;
+        
+                // Deduct points if they are applied
+                if (applyPoints) {
+    var deductedPoints = Math.floor(discountAmount * 100); 
+    document.getElementById('deductedPoints').value = deductedPoints;
+    
+}
 
         
-           
+                document.getElementById('Price').value = finalPrice.toFixed(2);
+                
+                document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
+                document.getElementById('displayTotalPrice').textContent = finalPrice.toFixed(2);
+                document.getElementById('displayDiscount').textContent = discountAmount.toFixed(2);
+        
+                updateStatus();
+            }
+        
             document.getElementById('RoomID').addEventListener('change', calculateTotalPrice);
             document.getElementById('CheckinDate').addEventListener('change', calculateTotalPrice);
             document.getElementById('CheckoutDate').addEventListener('change', calculateTotalPrice);
+            document.getElementById('applyPointsCheckbox').addEventListener('change', calculateTotalPrice);
         
-            
             calculateTotalPrice();
         
             function updateStatus() {
-        var roomId = document.getElementById('RoomID').value;
-        var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
+                console.log("Update Status running");
+                var roomId = document.getElementById('RoomID').value;
+                var selectedRoomOption = document.querySelector('#RoomID option[value="' + roomId + '"]');
+               
+                if (!selectedRoomOption) {
+                    console.error("Selected room option not found.");
+                    return;
+                }
         
-        if (!selectedRoomOption) {
-            console.error("Selected room option not found.");
-            return;
-        }
-
-        var availability = selectedRoomOption.getAttribute('data-availability');
-
-        document.getElementById('Status').value = availability;
-
-        if (availability === 'Unavailable') {
-            // Hide the Make Payment button
-            document.getElementById('paymentButton').style.display = 'none';
-            // Display an alert
-            alert('This room is currently unavailable. Please choose another room.');
-        } else {
-            // Show the Make Payment button
-            document.getElementById('paymentButton').style.display = 'block';
-        }
-    }
-
-    document.getElementById('RoomID').addEventListener('change', updateStatus);
-
-    updateStatus();
+                var availability = selectedRoomOption.getAttribute('data-availability');
+                var errorMessage = document.getElementById('errorMessage');
+        
+                var paymentButton = document.getElementById('paymentButton');
+        
+                console.log(availability);
+        
+                if (availability === 'Unavailable') {
+                    errorMessage.style.display = 'block';
+                    paymentButton.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    paymentButton.style.display = 'block';
+                }
+                
+                document.getElementById('Status').value = availability;
+            }
+        
+            document.getElementById('RoomID').addEventListener('change', updateStatus);
+        
+            updateStatus();
         </script>
-
+        
     </body>
 </x-app-layout>

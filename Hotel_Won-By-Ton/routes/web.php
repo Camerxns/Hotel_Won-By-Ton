@@ -10,6 +10,7 @@ use App\Http\Controllers\roomsAPI;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReceiptController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\RewardsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,8 +83,11 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/reservations', [ReservationsController::class, 'show'])->name('reservations.show');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/rewards', [RewardsController::class, 'index'])->name('rewards.index');
+});
 
-
+Route::get('/show-points', [RewardsController::class, 'index'])->name('show-points');
 
 
 
