@@ -58,7 +58,10 @@
 
     .button-container {
         padding: 10px;
-        text-align: center; /* Center align buttons */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .book-now-btn {
@@ -73,22 +76,16 @@
     }
 
     .book-now-btn:hover {
-        background-color: #0056b3; /* Change button hover color */
-        border-color: #0056b3; /* Change button hover border color */
+        background-color: #0056b3; 
+        border-color: #0056b3; 
     }
 
-    @media (max-width: 992px) {
-        .col-lg-4 {
-            flex: 0 0 calc(50% - 20px);
-            max-width: calc(50% - 20px);
-        }
-    }
-
-    @media (max-width: 576px) {
-        .col-lg-4 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
+    .btn{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 30px;
     }
 </style>
 
@@ -109,7 +106,7 @@
                     <div class="desc-item"> {{ $room->Availability }}</div>
                     <div class="desc-item">Price Per Night: ${{ $room->Price }}</div>
                     <div class="button-container">
-                        <a class="btn btn-sm btn-dark rounded py-2 px-4 book-now-btn" href="http://127.0.0.1:8000/booking">Book Now</a>
+                        <a class="btn btn-sm btn-dark rounded" href="http://127.0.0.1:8000/booking">Book Now</a>
                     </div>
                 </div>
             </div>
