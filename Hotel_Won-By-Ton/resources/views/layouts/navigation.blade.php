@@ -41,7 +41,7 @@
                         </x-nav-link>
                 </div>
                     <x-nav-link :href="route('service')" :active="request()->routeIs('service')">
-                        {{ __('Service') }}
+                        {{ __('service') }}
                     </x-nav-link>
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         <x-nav-link :href="route('booking')" :active="request()->routeIs('booking')">

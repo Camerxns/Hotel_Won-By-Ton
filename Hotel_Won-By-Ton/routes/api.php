@@ -40,3 +40,5 @@ Route::resource('reservations', ReservationsController::class);
 // Route::delete('/admin-dashboard/{id}', [ReservationsController::class, 'destroy'])->name('admin.dashboard.destroy');
 
 Route::delete('/Room/{id}', 'App\Http\Controllers\managerAddAPI@destroy')->name('Room.destroy');
+Route::post('/addRoom', [addRoomAPI::class, 'store'])-> name('addRoom');
+Route::delete('/Room/{id}', 'App\Http\Controllers\addRoomAPI@destroy')->name('Room.destroy');
