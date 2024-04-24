@@ -11,6 +11,9 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReceiptController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RewardsController;
+use App\Http\Controllers\users;
+use App\Http\Controllers\rooms;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +40,17 @@ Route::get('/about', function () {
 
 
 Route::get('/booking', [PaymentController::class,'showBookingForm'])->middleware(['auth', 'verified'])->name('booking');
+// Route::get('/booking', function () {
+//     return view('booking');
+// })->middleware(['auth', 'verified'])->name('booking');
+
+
+// Route::get('/room', function () {
+//     return view('room');
+// })->middleware(['auth', 'verified'])->name('room');
+
+Route::get('/room2', [rooms::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
+
 
 
 Route::get('/service', function () {
@@ -111,3 +125,4 @@ Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');
 
 
 require __DIR__.'/auth.php';
+Route::get('show_room', [rooms::class, 'index']);
