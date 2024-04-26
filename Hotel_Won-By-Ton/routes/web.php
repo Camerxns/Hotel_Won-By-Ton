@@ -49,7 +49,7 @@ Route::get('/booking', [PaymentController::class,'showBookingForm'])->middleware
 //     return view('room');
 // })->middleware(['auth', 'verified'])->name('room');
 
-Route::get('/room2', [rooms::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
+Route::get('/room2', [roomsAPI::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
 
 
 
@@ -125,4 +125,8 @@ Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');
 
 
 require __DIR__.'/auth.php';
-Route::get('show_room', [rooms::class, 'index']);
+Route::get('show_room', [roomsAPI::class, 'index']);
+
+Route::get('/Gym', function () {
+    return view('Gym');
+})->name('Gym');
