@@ -38,20 +38,9 @@ Route::get('/about', function () {
     return view('about1');
 })->middleware(['auth', 'verified'])->name('about1');
 
-
 Route::get('/booking', [PaymentController::class,'showBookingForm'])->middleware(['auth', 'verified'])->name('booking');
-// Route::get('/booking', function () {
-//     return view('booking');
-// })->middleware(['auth', 'verified'])->name('booking');
-
-
-// Route::get('/room', function () {
-//     return view('room');
-// })->middleware(['auth', 'verified'])->name('room');
 
 Route::get('/room2', [roomsAPI::class, 'index'])->middleware(['auth', 'verified'])->name('room2');
-
-
 
 Route::get('/service', function () {
     return view('service');
@@ -87,14 +76,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-
-
-
-
-
-
 Route::get('/reservations', [ReservationsController::class, 'show'])->name('reservations.show');
 
 Route::middleware(['auth'])->group(function () {
@@ -103,26 +84,21 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/show-points', [RewardsController::class, 'index'])->name('show-points');
 
-
+Route::post('/deductPoints', [RewardsController::class, 'deductPoints'])->name('deductPoints');
 
 Route::get('/popup', function () {
     return view('popup');
 })->name('popup');
 
 Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
-// mental note uncomment out or ill get simted by someone who has the sandwich of life
-
-// Route::get('/adminDashboard', [adminDashboardAPI::class, 'index'])->name('adminDashboard');
 
 Route::get('/rooms', [roomsAPI::class, 'index'])->name('room2');
 
 Route::post('/managerAdd', [managerAddAPI::class, 'store'])->name('addRoom');
+
 Route::post('/reservation', [ReservationsController::class, 'store'])->name('reservation');
-// mental note uncomment out or ill get simted by someone who has the sandwich of life
 
 Route::get('/receipt', [ReceiptController::class, 'show'])->name('receipt');
-// Route::get('/booking', [Payment::class, 'showPaymentForm'])->name('payment.show');
-
 
 require __DIR__.'/auth.php';
 Route::get('show_room', [roomsAPI::class, 'index']);
