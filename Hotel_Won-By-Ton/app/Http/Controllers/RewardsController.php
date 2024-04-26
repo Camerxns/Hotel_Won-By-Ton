@@ -24,5 +24,18 @@ class RewardsController extends Controller
         }
     }
 
+    public function deductPoints(Request $request){
+        $user = auth()->user();
+
+        
+
+        if ($user){
+            $deductedPoints = $request->deductPoints;
+            $user->points -= $deductedPoints;
+            
+            return response()->json(['success' => true]);
+        }
+    }
+
 
 }

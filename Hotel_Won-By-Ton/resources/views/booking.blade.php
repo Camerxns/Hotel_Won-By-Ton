@@ -77,6 +77,9 @@
         button[type="button"] {
             background-color: #f44336;
         }
+        #hidden-form{
+            display: none;
+        }
     </style>
     <body>
       
@@ -133,8 +136,11 @@
                 </div>
                 <button id="paymentButton" type="submit" class="btn btn-primary">Make Payment</button>
                 <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
-                <input type="hidden" id="deductedPoints" name="deductedPoints" value="">
 
+            </form>
+            <form id="hidden-form" method="POST" action="{{ route('deductPoints') }}">
+                @csrf
+                <input type="hidden" id="deductedPoints" name="deductedPoints" value="">
             </form>
         </div>
        
