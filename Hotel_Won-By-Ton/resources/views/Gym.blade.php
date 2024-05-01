@@ -42,7 +42,7 @@
             }
 
             .btn1{
-                position: fixed;
+                position: relative;
                 display: inline-block;
                 padding: 10px 20px;
                 background-color: orange; 
