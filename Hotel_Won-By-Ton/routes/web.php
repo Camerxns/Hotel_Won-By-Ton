@@ -106,3 +106,14 @@ Route::get('show_room', [roomsAPI::class, 'index']);
 Route::get('/Gym', function () {
     return view('Gym');
 })->name('Gym');
+Route::get('show_room', [rooms::class, 'index']);
+
+Route::get('/food', function () {
+    return view('food');
+});
+Route::get('/spa', function () {
+    return view('spa');
+});
+Route::get('/sports', function () {
+    return view('sports');
+});

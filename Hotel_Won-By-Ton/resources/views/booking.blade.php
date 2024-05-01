@@ -180,16 +180,14 @@
                 var discountAmount = applyPoints ? Math.min(totalPrice, {{ Auth::user()->points }} * 0.01) : 0;
                 var finalPrice = totalPrice - discountAmount;
         
-                // Deduct points if they are applied
+                //deducting points be like
                 if (applyPoints) {
     var deductedPoints = Math.floor(discountAmount * 100); 
     document.getElementById('deductedPoints').value = deductedPoints;
     
+    deductedPoints = 0;
 }
-
-        
                 document.getElementById('Price').value = finalPrice.toFixed(2);
-                
                 document.getElementById('displayPricePerNight').textContent = pricePerNight.toFixed(2);
                 document.getElementById('displayTotalPrice').textContent = finalPrice.toFixed(2);
                 document.getElementById('displayDiscount').textContent = discountAmount.toFixed(2);

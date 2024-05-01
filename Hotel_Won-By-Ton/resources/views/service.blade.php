@@ -53,18 +53,18 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="http://127.0.0.1:8000/rooms">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-hotel fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Rooms & Appartment</h5>
+                            <h5 class="mb-3">Rooms</h5>
                             <p class="text-body mb-0">Our rooms are of the highest quality to our customers</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="http://127.0.0.1:8000/food">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-utensils fa-2x text-primary"></i>
@@ -75,7 +75,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="http://127.0.0.1:8000/spa">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-spa fa-2x text-primary"></i>
@@ -86,7 +86,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="http://127.0.0.1:8000/sports">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-swimmer fa-2x text-primary"></i>
