@@ -123,6 +123,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="#" data-room-type="all">All</a></li>
                 <li><a class="dropdown-item" href="#" data-room-type="Suite">Suite</a></li>
+                <li><a class="dropdown-item" href="#" data-room-type="Single">Single</a></li>
                 <li><a class="dropdown-item" href="#" data-room-type="Double">Double</a></li>
                 <li><a class="dropdown-item" href="#" data-room-type="Double+">Double+</a></li>
                 <li><a class="dropdown-item" href="#" data-room-type="GameRoom">Tournament Room</a></li>
