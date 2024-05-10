@@ -92,7 +92,7 @@
                 <input type="text" id="ReservationID" name="ReservationID" readonly>
             
                 <input type="hidden" name="id" value="{{ Auth::user()->id }}">
-            
+               
                 <label for="RoomID">Room:</label>
                 <select name="RoomID" id="RoomID">
                     @foreach ($rooms as $room)
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <button id="paymentButton" type="submit" class="btn btn-primary">Make Payment</button>
-                <a href="http://127.0.0.1:8000/" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/room2" class="btn btn-primary">Cancel<i class="fa fa-arrow-right ms-3"></i></a>
 
             </form>
             <form id="hidden-form" method="POST" action="{{ route('deductPoints') }}">
@@ -234,6 +234,7 @@
         
             updateStatus();
         </script>
+     
         
     </body>
 </x-app-layout>

@@ -88,21 +88,21 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="http://127.0.0.1:8000/" class="nav-item nav-link active">Home</a>
-                                <a href="http://127.0.0.1:8000/about" class="nav-item nav-link">About</a>
-                                <a href="http://127.0.0.1:8000/service" class="nav-item nav-link">Services</a>
-                                <a href="http://127.0.0.1:8000/room" class="nav-item nav-link">Rooms</a>
+                                <a href="/" class="nav-item nav-link active">Home</a>
+                                <a href="/register" class="nav-item nav-link">About</a>
+                                <a href="/register" class="nav-item nav-link">Services</a>
+                                <a href="/register" class="nav-item nav-link">Rooms</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="http://127.0.0.1:8000/booking" class="dropdown-item">Booking</a>
-                                        <a href="http://127.0.0.1:8000/team" class="dropdown-item">Our Team</a>
-                                        <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
-                                        <a href="http://127.0.0.1:8000/managerAdd" class="dropdown-item">Add Room</a>
+                                        <a href="/register" class="dropdown-item">Booking</a>
+                                        <a href="/register" class="dropdown-item">Our Team</a>
+                                        <a href="/register" class="dropdown-item">Testimonial</a>
+                                        <a href="/register" class="dropdown-item">Add Room</a>
                                         <a href="http://127.0.0.1:8000/managerDelete" class="dropdown-item">Delete Room </a>
                                     </div>
                                 </div>
-                                <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>
+                                <a href="/register" class="nav-item nav-link">Contact</a>
                             </div>
                             <div>
                                 {{-- @if ($__SESSION = TRUE){
@@ -129,8 +129,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="/register" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="/register" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -140,8 +140,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="/register" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="/register" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="http://127.0.0.1:8000/service">Explore More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="/register">Explore More</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="row g-3">
@@ -256,7 +256,7 @@
                                 </div>
                                 <p class="text-body mb-3">Indulge in spacious elegance and luxurious amenities, offering unparalleled comfort and sophistication.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="/register">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +285,7 @@
                                 </div>
                                 <p class="text-body mb-3">Designed for discerning professionals, this room combines functionality with refined style, providing a serene environment for work and relaxation.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="/register">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +314,7 @@
                                 </div>
                                 <p class="text-body mb-3">Escape to a haven of tranquility and opulence, where every detail is meticulously crafted to ensure an unforgettable stay.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="http://127.0.0.1:8000/booking">Book Now</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="/register">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -323,7 +323,7 @@
                 </div>
             </div>
             <div style="text-align: center">
-                <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="http://127.0.0.1:8000/room">View All</a>
+                <a class="btn btn-primary py-3 px-5 mt-2" style="text-align: center" href="/register">View All</a>
             </div>
             
         </div>
@@ -338,8 +338,8 @@
                         <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                         <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
                         <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a href="http://127.0.0.1:8000/room" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
-                        <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
+                        <a href="/register" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                        <a href="/register" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -381,7 +381,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-hotel fa-2x text-primary"></i>
@@ -392,7 +392,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-utensils fa-2x text-primary"></i>
@@ -403,7 +403,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-spa fa-2x text-primary"></i>
@@ -414,7 +414,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-swimmer fa-2x text-primary"></i>
@@ -425,7 +425,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-glass-cheers fa-2x text-primary"></i>
@@ -436,7 +436,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
+                        <a class="service-item rounded" href="/register">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
                                     <i class="fa fa-dumbbell fa-2x text-primary"></i>
@@ -508,9 +508,9 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/guy.jpg" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -524,9 +524,9 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/Case.jpg" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -540,9 +540,9 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/Jon.jpg" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
@@ -556,9 +556,9 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/Jakob.png" alt="" id="staffimg">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="/register"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">

@@ -96,7 +96,7 @@
             <div id="book-now" class="container-xxl py-5 text-center">
                 <h2 class="mb-4" style="color: white">Ready to rejuvenate your body and mind?</h2>
                 
-                    <button class="btn btn-primary btn-lg py-3 px-5" onclick="window.location.href='http://127.0.0.1:8000/rooms'">Book A Room With The Spa Of Your Dreams!</button>
+                    <button class="btn btn-primary btn-lg py-3 px-5" onclick="window.location.href='/room2'">Book A Room With The Spa Of Your Dreams!</button>
                 
             </div>
     
