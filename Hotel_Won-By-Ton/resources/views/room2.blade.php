@@ -88,6 +88,22 @@
     </head>
     <body>
         <div class="container" id="roomContainer">
+            <div class="dropdown" >
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter by Room Type
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#" data-room-type="all">All</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="Suite">Suite</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="Single">Single</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="Double">Double</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="Double+">Double+</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="GameRoom">Tournament Room</a></li>
+                    <li><a class="dropdown-item" href="#" data-room-type="PartyRoom">Party Rooms</a></li>
+                </ul>
+            </div>
+           <br>
+            
             <!-- Dynamic rooms display -->
             <div class="row">
                 @foreach($rooms as $room)
@@ -106,30 +122,21 @@
                             <div class="desc-item"> <i class='fas fa-male' style='font-size:24px'></i> : {{ $room->Capacity }} </div>
                             <div class="desc-item">Price Per Night: ${{ $room->Price }}</div>
                             <div class="button-container">
-                                <a class="btn btn-sm btn-dark rounded" href="#">Book Now</a>
+                                <a class="btn btn-sm btn-dark rounded" href="/booking">Book Now</a>
                             </div>
                         </div>
                     </div>
                 @endif
                 @endforeach
             </div>
+    
         </div>
     
-        <!-- Dropdown for filtering room types -->
-        <div class="dropdown" style="position: absolute; top: 20px; right: 20px;">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Filter by Room Type
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#" data-room-type="all">All</a></li>
-                <li><a class="dropdown-item" href="#" data-room-type="Suite">Suite</a></li>
-                <li><a class="dropdown-item" href="#" data-room-type="Single">Single</a></li>
-                <li><a class="dropdown-item" href="#" data-room-type="Double">Double</a></li>
-                <li><a class="dropdown-item" href="#" data-room-type="Double+">Double+</a></li>
-                <li><a class="dropdown-item" href="#" data-room-type="GameRoom">Tournament Room</a></li>
-                <!-- Add more room types as needed -->
-            </ul>
-        </div>
+        
+        
+       
+        
+    
     
         <!-- Bootstrap JS and Font Awesome JS links -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -161,6 +168,7 @@
                 });
             });
         </script>
+       
     </body>
     </html>
 </x-app-layout>

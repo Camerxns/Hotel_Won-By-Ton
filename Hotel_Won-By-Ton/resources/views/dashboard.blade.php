@@ -112,8 +112,8 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                     <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                    <a href="http://127.0.0.1:8000/rooms" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                    <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                    <a href="/room2" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a href="/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +123,8 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                     <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious Hotel</h1>
-                                    <a href="http://127.0.0.1:8000/rooms" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                    <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                    <a href="/room2" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                    <a href="/booking" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                                 </div>
                             </div>
                         </div>
@@ -323,7 +323,7 @@
                             <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
                             <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
                             <p class="text-white mb-4">We offer some of the best hotel on the market. There are a TON of Hotels but only ONE is suited for YOU! We offer that in our simple to use website, that will not only give you the place you are looking for but the price thats just right!</p>
-                            <a href="http://127.0.0.1:8000/room2" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                            <a href="/room2" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
                             <a href="http://127.0.0.1:8000/booking" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
                         </div>
                     </div>
@@ -616,7 +616,7 @@
     
     
             <!-- Back to Top -->
-            <a href="http://127.0.0.1:8000/" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <a href="/" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
         </div>
     
         <!-- JavaScript Libraries -->

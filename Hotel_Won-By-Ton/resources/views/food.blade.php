@@ -100,7 +100,7 @@
             <div id="book-now" class="container-xxl py-5 text-center">
                 <h2 class="mb-4" style="color: white">Ready to experience culinary bliss?</h2>
                 
-                    <button class="btn btn-primary btn-lg py-3 px-5" onclick="window.location.href='http://127.0.0.1:8000/rooms'">Book With Us Now</button>
+                    <button class="btn btn-primary btn-lg py-3 px-5" onclick="window.location.href='/room2'">Book With Us Now</button>
                 
             </div>
     

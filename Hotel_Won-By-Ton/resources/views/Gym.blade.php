@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="btn1"  href={{ url("/rooms") }}>Explore Gyms</a>
+                            <a class="btn1"  href={{ url("/rooms") }}>Book a Room to experience our world class gyms yourself!</a>
                         </div>
                         <div class="col-lg-6">
                             <div class="row g-3">

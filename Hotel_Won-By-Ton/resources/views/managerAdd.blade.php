@@ -94,8 +94,11 @@
                                         <input type="" class="form-control"  name="Discount" id="Discount" placeholder="Enter a discount if any for room">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="inputPassword" class="form-label">Availability</label>
-                                        <input type="" class="form-control"  name="Availability" id="Availability" placeholder="Enter the rooms availability">
+                                        <label for="availability" class="form-label">Availability</label>
+                                        <select class="form-select" id="Availability" name="Availability">
+                                            <option value="Available">Available</option>
+                                            <option value="Unavailable">Unavailable</option>
+                                        </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputPassword" class="form-label">Image of Room</label>
