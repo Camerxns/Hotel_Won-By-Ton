@@ -177,14 +177,13 @@
                 var totalPrice = pricePerNight * numberOfNights;
         
                 var applyPoints = document.getElementById('applyPointsCheckbox').checked;
-                var discountAmount = applyPoints ? Math.min(totalPrice, {{ Auth::user()->points }} * 0.01) : 0;
+                var discountAmount = applyPoints ? Math.min(totalPrice, {{ Auth::user()->points }} * 0.04) : 0;
                 var finalPrice = totalPrice - discountAmount;
         
                 //deducting points be like
                 if (applyPoints) {
     var deductedPoints = Math.floor(discountAmount * 100); 
     document.getElementById('deductedPoints').value = deductedPoints;
-    
     deductedPoints = 0;
 }
                 document.getElementById('Price').value = finalPrice.toFixed(2);
