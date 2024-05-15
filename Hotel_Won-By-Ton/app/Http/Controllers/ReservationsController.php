@@ -17,7 +17,8 @@ class ReservationsController extends Controller
     {
      Reservation::create($request->all());
      $user = Auth::user();
-     $user->points += 100;
+     $user -> points =0;
+     $user->points +=100;
      $user->save();
      $room = Room::findOrFail($request->input('RoomID'));
      $room->Availability = 'Unavailable';
