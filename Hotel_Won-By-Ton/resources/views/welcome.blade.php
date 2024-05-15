@@ -479,7 +479,7 @@
                         <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                     </div>
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <p>I love making cabinets for this company espacially if there is children involved</p>
+                        <p>I love making cabinets for this company</p>
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded" src="img/blake.jpg" style="width: 45px; height: 45px;">
                             <div class="ps-3">
